@@ -1,0 +1,695 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap');
+html, body{
+    /* height: 100% */
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+.after{
+    overflow: hidden;
+}
+.page-background {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-image: linear-gradient(rgba(43, 48, 71, 0.4), rgba(43, 48, 71, 0.4)),url(img/background.jpg);
+    background-color: transparent;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transform: translateZ(0);
+}
+.container{
+    width: 100%;
+}
+.main.container{
+    padding-top: 6vw;
+    padding-right: 3vw;
+    padding-bottom: 6vw;
+    padding-left: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+}
+.main .inner{
+    /* height: 100%; */
+    -webkit-flex: 1; /* Safari */
+    -ms-flex: 1; /* IE 10 */
+    flex: 1; /* Standard syntax */
+    height: 100vh;
+}
+.main .inner .widget{
+    padding: 1vw;
+    width: fit-content;
+}
+.main .inner.image{
+    padding: 1vw;
+    background-color: #fff;
+    width: 45%;
+    /* flex: 1 1 auto; */
+    text-align: center;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+.main .inner.image .logo{
+    width: 100%;
+    max-width: 150px
+}
+.main .inner.image .main{
+    width: 100%;
+    max-width: 350px;
+}
+.main .inner.text{
+    display: flex;
+    flex-direction: column;
+    background-color: #f7a885;
+    padding-top: 6vw;
+    padding-right: 3vw;
+    padding-bottom: 6vw;
+    padding-left: 3vw;
+    width: 55%;
+    /* flex: 1 1 auto; */
+    min-height: 600px;
+    justify-content: center;
+}
+.main .inner.text h1{
+    font-size: 56px;
+    color: #fff;
+    font-family: 'Karla', sans-serif;
+}
+.main .inner.text p{
+    font-size: 20px;
+    font-family: 'Karla', sans-serif;
+    color: #fff;
+}
+.main .inner.text .signup{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+.main .inner.text .signup .sign{
+    width: 100%;
+    max-width: 200px;
+}
+.main .inner.text .signup .form{
+    width: 70%;
+}
+.main .inner.text .signup form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.main .inner.text .signup input{
+    padding: 0px 10px;
+    color: #020020;
+    border: 1px solid #ffffff;
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: inherit;
+    border-radius: 3px;
+    font-family: "Karla", sans-serif;
+    margin: 1vw;
+}
+.main .inner.text  .signup button{
+    border-color: #2b3047;
+    background: #2b3047;
+    color: #ffffff;
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+    transition: color 0.2s linear,background 0.2s linear,border-color 0.2s linear, text-shadow 0.2s linear;
+    text-decoration: none;
+    position: relative;
+    width: 100%;
+    font-weight: bold;
+    min-height: 48px;
+    min-width: 96px;
+    padding: 14px 24px;
+    font-family: "Karla",sans-serif;
+}
+.guide.container{
+    padding-top: 6vw;
+    padding-right: 3vw;
+    padding-bottom: 6vw;
+    padding-left: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+.guide .inner{
+    padding: 1vw;
+    width: 50%;
+}
+.guide .inner .widget{
+    padding: 1vw;
+}
+.guide .inner p{
+    font-size: 20px;
+    font-family: 'Karla', sans-serif;
+    color: #2b3047;
+    line-height: 1.5;
+}
+.guide .inner .title{
+    color: #e08d66;
+    font-weight: 700;
+}
+.guide .inner h1{
+    font-size: 40px;
+    color: #2b3047;
+    font-family: 'Karla', sans-serif;
+}
+.guide .inner ul{
+    list-style: none;
+}
+.guide .inner li{
+    margin: 0px 0px 9px;
+    padding-left: 27px;
+    font-size: 18px;
+    color: #2b3047;
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+}
+.guide .inner li::before{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 700;
+    content: '';
+    background-image: url(img/heart-regular.svg);
+    margin-right: 10px;
+    color: hsl(19, 66%, 64%);
+    vertical-align: middle;
+    left: 5vw;
+    position: absolute;
+}
+.guide .inner a{
+    font-size: 20px;
+    border-color: #2b3047;
+    background: #2b3047;
+    color: #ffffff;
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+    transition: color 0.2s linear,background 0.2s linear,border-color 0.2s linear, text-shadow 0.2s linear;
+    text-decoration: none;
+    position: relative;
+    width: 100%;
+    font-weight: bold;
+    min-height: 48px;
+    min-width: 96px;
+    padding: 14px 24px;
+    font-family: "Karla",sans-serif;
+}
+.guide .inner img{
+    width: 100%;
+}
+.blog.container{
+    padding-top: 8vw;
+    padding-right: 3vw;
+    padding-bottom: 8vw;
+    padding-left: 3vw;
+}
+.blog .inner{
+    background-color: #fff;
+    padding-top: 4vw;
+    padding-right: 3vw;
+    padding-bottom: 4vw;
+    padding-left: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.blog .inner .widget{
+    padding: 1vw;
+}
+.blog .inner .title{
+    color: #e08d66;
+    font-weight: 700;
+}
+.blog .inner .widget p{
+    font-size: 20px;
+    font-family: "Karla",sans-serif;
+    text-align: center;
+}
+.blog .inner .widget.header{
+    width: 60%;
+}
+.blog .inner .widget h1{
+    font-size: 40px;
+    font-family: "Karla",sans-serif;
+    color: #2b3047;
+    text-align: center;
+}
+.blog .inner .widget.hr{
+    width: 100%;
+}
+.blog .inner .widget hr{
+    color: #e08d66;
+    width: 100%;
+    border-top: 1px solid #fde1d4;
+}
+.blog .inner .columns{
+    display: flex;
+}
+.blog .inner .columns .column h3{
+    font-size: 24px;
+    font-family: "Karla",sans-serif;
+    color: #2b3047;
+    padding-bottom: 16.5px;
+    line-height: 1.375;
+}
+.blog .inner .columns .column p{
+    text-align: left;
+    font-size: 18px;
+    font-family: "Karla",sans-serif;
+    color: #2b3047;
+    line-height: 1.5;
+}
+.blog .inner .columns .column img{
+    width: 100%;
+    max-width: 150px;
+}
+.sign-up.container{
+    padding-top: 3vw;
+    padding-right: 3vw;
+    padding-bottom: 3vw;
+    padding-left: 3vw;
+    background-color: rgb(247, 168, 133);
+    text-align: center;
+}
+.sign-up .inner{
+    padding-top: 1vw;
+    padding-right: 1vw;
+    padding-bottom: 1vw;
+    padding-left: 1vw;
+}
+.sign-up .inner .widget{
+    padding: 1vw;
+}
+.sign-up .inner .widget h1{
+    font-size: 40px;
+    font-family: "Karla",sans-serif;
+    color: #fff;
+}
+.sign-up .inner .widget a{
+    font-size: 20px;
+    border-color: #2b3047;
+    background: #2b3047;
+    color: #ffffff;
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+    transition: color 0.2s linear,background 0.2s linear,border-color 0.2s linear, text-shadow 0.2s linear;
+    text-decoration: none;
+    position: relative;
+    width: 30%;
+    font-weight: bold;
+    min-height: 48px;
+    min-width: 96px;
+    padding: 14px 24px;
+    font-family: "Karla",sans-serif;
+}
+.social.container{
+    padding-top: 1vw;
+    padding-right: 3vw;
+    padding-bottom: 1vw;
+    padding-left: 3vw;
+    background-color: #fff;
+}
+.social .inner{
+    padding: 1vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+.social .inner .widget p{
+    font-size: 16px;
+    color: #2b3047;
+    font-family: "Karla",sans-serif;
+}
+.social .inner .widget p a{
+    font-size: 16px;
+    color: #e08d66;
+    font-family: "Karla",sans-serif;
+}
+.social .inner .widget img{
+    width: 100%;
+    max-width: 100px
+}
+.social .inner .widget.icons{
+    font-family: "Karla",sans-serif;
+    display: flex;
+}
+.social .inner .icons .icon{
+    width: 48px;
+    height: 48px;
+}
+.social .inner .widget.icons i{
+    font-size: 25px;
+    color: #2b3047;
+    padding: 11.5px;
+}
+.footer.container{
+    padding-top: 2vw;
+    padding-right: 4vw;
+    padding-bottom: 2vw;
+    padding-left: 4vw;
+    text-align: center;
+    font-size: 16px;
+    color: #2b3047;
+    font-family: "Karla",sans-serif;
+    background-color: #fde1d4;
+}
+.footer .widget{
+    padding: 1vw;
+}
+.footer .widget a{
+    font-size: 16px;
+    color: #2b3047;
+    font-family: "Karla",sans-serif;
+}
+.color{
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: #000;
+    opacity: 0.6;
+    transform: translateZ(0);
+    transition: .8s 
+}
+.dialog{
+    display: flex;
+    position: absolute;
+    top: -100000px;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 2;
+    transition: top .8s cubic-bezier(1,0,0,1);
+    align-items: flex-start;
+}
+.click{
+    top: 0;
+}
+.dialog .inner{
+    max-width: 650px;
+    margin: auto;
+    width: 100%;
+    flex-basis: 650px;
+}
+.popup{
+    padding: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    background-image: linear-gradient(rgba(224, 141, 102, 0.79), rgba(224, 141, 102, 0.79)),url(img/background.jpg);
+    background-color: transparent;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transform: translateZ(0);
+}
+.a{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+.leadbox__close {
+    z-index: 1;
+    position: relative;
+    cursor: pointer;
+    line-height: 0;
+    border-radius: 50%;
+    padding: 10px;
+    background: #dde2eb;
+    width: 32px;
+    height: 32px;
+    fill: #999999;
+    -webkit-transition: fill 0.2s ease;
+    transition: fill 0.2s ease;
+}
+.popup .widget{
+    padding: 1vw;
+    width: 100%;
+}
+.popup .flex{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.popup .flex .img{
+    width: 40%;
+}
+.popup .flex .img img{
+    width: 100%;
+    max-width: 150px;
+}
+.popup .flex .widget h1{
+    font-size: 32px;
+    color: #fff;
+    text-align: left;
+    font-family: Karla;
+}
+.popup form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.popup input{
+    color: #020020;
+    border-radius: 3px;
+    padding: 0px 10px;
+    transition: border-color 200ms ease;
+    height: 40px;
+    width: 100%;
+    margin: 1vw;
+    border: 1px solid #fff;
+}
+.error{
+    border:1px solid #fa3246;
+}
+#label{
+    margin-bottom: 1vw;
+    text-align: left;
+    font-size: 0.75em;
+    font-family: Roboto, sans-serif;
+    color: #fa3246;
+    font-weight: 400;
+    width: 100%;
+}
+.popup button{
+    font-size: 18px;
+    border-color: #2b3047;
+    background: #2b3047;
+    color: #ffffff;
+    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    border-style: solid;
+    border-width: 1px;
+    text-align: center;
+    transition: color 0.2s linear,background 0.2s linear,border-color 0.2s linear, text-shadow 0.2s linear;
+    text-decoration: none;
+    position: relative;
+    width: 100%;
+    font-weight: bold;
+    min-height: 48px;
+    min-width: 96px;
+    padding: 14px 24px;
+    font-family: "Karla",sans-serif;
+    cursor: pointer;
+}
+.change{
+    opacity: 0.5;
+    pointer-events: none;
+    transition: opacity 7.5s ease;
+}
+.popup p{
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    font-family: Karla;
+}
+@media screen and (max-width: 760px) {
+    .main.container{
+        flex-direction: column;
+    }
+    .main .inner{
+        height: 100%;
+        width: 100%;
+    }
+    .main .inner.image{
+        width: 100%;
+    }
+    .main .inner.text{
+        width: 100%;
+    }
+    .main .inner.text h1{
+        font-size: 44px;
+    }
+    .main .inner.text p{
+        font-size: 18px;
+    }
+    .main .inner.text .signup{
+        flex-direction: column;
+    }
+    .main .inner.text .signup .widget{
+        width: 100%;
+    }
+    .main .inner.text  .signup button{
+        font-size: 18px;
+    }
+    .guide.container{
+        flex-direction: column;
+    }
+    .guide .inner{
+        width: 100%;
+    }
+    .guide .inner p{
+        font-size: 18px;
+    }
+    .guide .inner h1{
+        font-size: 32px;
+    }
+    .guide .inner li{
+        font-size: 16px;
+    }
+    .guide .inner li::before{
+        font-size: 16px;
+    }
+    .guide .inner a{
+        font-size: 18px;
+    }
+    .blog .inner .widget p{
+        font-size: 18px;
+    }
+    .blog .inner .widget.header{
+        width: 100%;
+    }
+    .blog .inner .widget h1{
+        font-size: 32px;
+    }
+    .blog .inner .columns{
+        flex-direction: column;
+    }
+    .blog .inner .columns .column{
+        width: 100%;
+    }
+    .blog .inner .columns .column h3{
+        font-size: 21px;
+    }
+    .blog .inner .columns .column p{
+        font-size: 16px;
+    }
+    .sign-up .inner .widget h1{
+        font-size: 32px;
+    }
+    .sign-up .inner .widget a{
+        font-size: 18px;
+        width: 100%;
+    }
+    .social .inner{
+        flex-direction: column;
+    }
+    .social .inner .widget{
+        padding: 2vw;
+    }
+    .social .inner .widget p{
+        font-size: 14px;
+    }
+    .social .inner .widget p a{
+        font-size: 14px;
+    }
+    .social .inner .icons .icon{
+        width: 24px;
+        height: 24px;
+    }
+    .social .inner .widget.icons i{
+        font-size: 24px;
+    }
+    .footer.container{
+        font-size: 14px;
+    }
+    .footer .widget a{
+        font-size: 14px;
+    }
+    .popup .flex{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .popup .flex .widget h1{
+        font-size: 28px;
+    }
+    .popup p{
+        font-size: 10px;
+    } 
+}
+@media screen and (max-width: 480px) {
+    .main .inner.text h1{
+        font-size: 36px;
+    }
+    .guide .inner h1{
+        font-size: 30px;
+    }
+    .blog .inner .widget h1{
+        font-size: 30px;
+    }
+    .sign-up .inner .widget h1{
+        font-size: 30px;
+    } 
+    .popup .flex .widget h1{
+        font-size: 27px;
+    }
+}

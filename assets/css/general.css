@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Shalimar&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+    transition: all 0.3s;
+}
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+body{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: fixed url('../img/2.jpg');
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #00000000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+input::placeholder, textarea::placeholder{
+    color: rgba(255, 255, 255, 0.61);
+}
+input:focus, input:active, input:visited, textarea:focus, textarea:active, textarea:visited{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.menu.container{
+    padding: 2vw;
+    align-self: flex-end;
+    font-family: 'Montserrat', sans-serif;
+}
+.menu ul li{
+    display: inline-block;
+    padding: 1vw;
+}
+.menu ul li:hover{
+    /* background-color: white; */
+    color: gray;
+}
+.menu ul li a{
+    padding: 1vw;  
+    text-decoration: none;
+    transition: all 0.3s;
+}
+.menu ul li a:hover{
+    background-color: white;
+    color: gray;
+}

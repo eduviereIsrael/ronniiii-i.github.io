@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Shalimar&display=swap');
+body{
+    overflow: hidden;
+}
+.menu.container{
+    padding: 2vw;
+    align-self: flex-end;
+    font-family: 'Montserrat', sans-serif;
+}
+.menu ul li{
+    display: inline-block;
+    padding: 1vw;
+}
+.menu ul li:hover{
+    /* background-color: white; */
+    color: gray;
+}
+.menu ul li a{
+    padding: 1vw;  
+    text-decoration: none;
+}
+.menu ul li a:hover{
+    background-color: white;
+    color: gray;
+}
+.text.container{
+    padding: 5vw;
+    text-align: center;
+}
+.text .widget{
+    padding: 1vw;
+    font-family: 'Montserrat', sans-serif;
+}
+.text .widget h2{
+    font-size: 200%;
+}
+.text .widget p{
+    font-size: 110%;
+}
+.text .widget h3{
+    font-size: 150%;
+    padding-bottom: 2vw;
+}
+.text .widget a{
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 14px 24px;
+    transition: all 0.3s;
+    font-weight: 500;
+    font-family: 'Comforter Brush', cursive;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+.text .widget a:hover{
+    background-color: white;
+    color: grey;
+}

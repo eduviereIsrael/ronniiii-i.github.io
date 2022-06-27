@@ -1,0 +1,142 @@
+
+.title.container{
+    padding: 2vw 5vw;
+    width: 60%;
+    font-family: 'Montserrat', sans-serif;
+}
+.title .widget h1{
+    font-size: 3vw;
+}
+.title .widget p{
+    line-height: 1.5;
+    font-size: 1.3vw;
+}
+.form.container{
+    width: 60%;
+    padding: 2vw 5vw;
+}
+.form .tabs{
+    display: flex;
+}
+.form .tabs .tab{
+    padding: .5vw;
+    margin: 0 5px;
+    background-color: #898987;
+    font-size: .8vw;
+    font-family: 'Montserrat', sans-serif;
+    border-radius: 5px;
+}
+.form .inputs{
+    padding: 1vw 0;
+}
+.form .inputs .widget{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    padding: 1vw 0 0;
+    border-bottom: 1px solid #898987;
+}
+.form .inputs .widget i{
+    width: 5%;
+    padding: 1vw 0;
+    color: rgba(255, 255, 255, 0.61);
+}
+.form .inputs .widget input{
+    width: 95%;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2vw;
+    padding: 1vw 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.form .inputs .widget textarea{
+    resize: none;
+    width: 95%;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2vw;
+    padding: 1vw 0;
+    height: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+}
+.form .buttons{
+    width: 100%;
+}
+.form .buttons button{
+    background-color: #898987;
+    padding: 1vw 2vw;
+    margin-right: .5vw;
+    border: none;
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.58);
+    -webkit-box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.58);
+    -moz-box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.58);
+}
+.form .buttons button::after{
+    background-color: #747471;
+    content: '';
+    height: .2vw;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+.social.container{
+    width: 60%;
+    padding: 2vw 5vw;
+}
+.social h2{
+    font-size: 2.1vw;
+    font-family: 'Montserrat', sans-serif;
+    padding: 1vw 1vw 1vw 0;
+}
+.social .socials{
+    display: flex;
+    justify-content: space-between;
+}
+.social .socials a{
+    padding: 1vw 2vw;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    font-weight: 700;
+    font-size: 1.2vw;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.58);
+    -webkit-box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.58);
+    -moz-box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.58);
+}
+.social .socials a::after{
+    content: '';
+    height: .3vw;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+.social .socials a i{
+    font-size: 1.5vw;
+}
+.social .socials a.twitter{
+    background-color: #1DA1F2;
+}
+.social .socials a.linkedin{
+    background-color: #0e76a8;
+}
+.social .socials a.github{
+    background-color: #171515;
+}
+.social .socials a.twitter::after{
+    background-color: #1982c4;
+}
+.social .socials a.linkedin::after{
+    background-color: #0c5c81;
+}
+.social .socials a.github::after{
+    background-color: #141111;
+}
