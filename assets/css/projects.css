@@ -63,8 +63,8 @@
 }
 .project .project_card:hover .card-content {
     /* display: flex; */
-    opacity: .6;
-    background-color: #898987fa;
+    opacity: 1;
+    background-color: #89898763;
 }
 .project .project_card .card-content a{
     background: linear-gradient(to right, #242424b0,#000000c0);
