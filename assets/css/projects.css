@@ -64,7 +64,7 @@
 .project .project_card:hover .card-content {
     /* display: flex; */
     opacity: 1;
-    background-color: #89898763;
+    background-color: #898987cc;
 }
 .project .project_card .card-content a{
     background: linear-gradient(to right, #242424b0,#000000c0);
