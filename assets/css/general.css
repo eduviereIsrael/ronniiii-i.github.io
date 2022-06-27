@@ -41,6 +41,9 @@ input:focus, input:active, input:visited, textarea:focus, textarea:active, texta
     border: none;
     outline: none;
 }
+a{
+    display: inline-block;
+}
 .menu.container{
     padding: 2vw;
     align-self: flex-end;
