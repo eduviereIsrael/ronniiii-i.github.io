@@ -69,6 +69,7 @@
     margin-right: .5vw;
     border: none;
     position: relative;
+    cursor: pointer;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.58);
@@ -88,7 +89,7 @@
 }
 .form .buttons button:hover,
 .form .buttons input:hover{
-    border: 1px solid white;
+    outline: 1px solid white;
 }
 .social.container{
     width: 60%;
