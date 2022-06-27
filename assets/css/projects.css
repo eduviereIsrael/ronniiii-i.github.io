@@ -58,11 +58,12 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    opacity: 1;
+    opacity: 0;
     transition: all 0.5s;
 }
 .project .project_card:hover .card-content {
-    display: flex;
+    /* display: flex; */
+    opacity: .6;
     background-color: #898987fa;
 }
 .project .project_card .card-content a{
