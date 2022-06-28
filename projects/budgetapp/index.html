@@ -9,38 +9,54 @@
 </head>
 <body>
     <h1>The Budget App</h1>
-    <div id="budgetInput" class="container">
-        <label for="budgetInput">Enter Budget Amount</label>
-        <input type="number" name="budgetinput" id="budgetInput" min="0">
-        <button onclick="displayBudget()">Calculate Balance</button>
-    </div>
-    <div id="budgetOutput" class="container">
-        <div class="display">
-            <h2>Budget</h2>
-            <i class="fas fa-coins"></i>
-            <p>$<span id="budgetDisplay"></span></p>
+    <div class="content">
+        <div id="budgetInput" class="container">
+            <label for="budgetInput">Enter Budget Amount</label>
+            <input type="number" name="budgetinput" id="budgetInput" min="0">
+            <button onclick="displayBudget()">Calculate Balance</button>
         </div>
-        <div class="display">
-            <h2>Expenses</h2>
-            <i class="fas fa-credit-card"></i>
-            <p>$<span id="expenseDisplay"></span></p>
+        <div id="budgetOutput" class="container">
+            <div class="display">
+                <h2>Budget</h2>
+                <i class="fas fa-coins"></i>
+                <p>$<span id="budgetDisplay"></span></p>
+            </div>
+            <div class="display">
+                <h2>Expenses</h2>
+                <i class="fas fa-credit-card"></i>
+                <p>$<span id="expenseDisplay"></span></p>
+            </div>
+            <div class="display">
+                <h2>Balance</h2>
+                <i class="fa fa-university"></i>
+                <p>$<span id="balanceDisplay"></span></p>
+            </div>
         </div>
-        <div class="display">
-            <h2>Balance</h2>
-            <i class="fa fa-university"></i>
-            <p>$<span id="balanceDisplay"></span></p>
+        <div id="expenseInput" class="container">
+            <label for="expenseName">Expense Name</label>
+            <input type="text" name="expensename" id="expenseName">
+    
+            <label for="expenseAmount">Expense Amount</label>
+            <input type="number" name="expenseamount" id="expenseAmount">
+    
+            <button onclick="addExpense()">Add Expense</button>
+        </div>
+        <div id="expenseOutput" class="container">
+            <table class="">
+                <thead>
+                    <tr>
+                        <th>Expense Title</th>
+                        <th>Expense Value</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody class="scroll" id="tbodyy">
+    
+                </tbody>
+            </table>
         </div>
     </div>
-    <div id="expenseInput" class="container">
-        <label for="expenseName">Expense Name</label>
-        <input type="text" name="expensename" id="expenseName">
-
-        <label for="expenseAmount">Expense Amount</label>
-        <input type="number" name="expenseamount" id="expenseAmount">
-
-        <button onclick="addExpense()">Add Expense</button>
-    </div>
-    <div id="expenseOutput" class="container"></div>
     
 </body>
 </html>
