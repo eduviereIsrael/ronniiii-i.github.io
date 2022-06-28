@@ -1,27 +1,6 @@
 body{
     overflow: hidden;
 }
-.menu.container{
-    padding: 2vw;
-    align-self: flex-end;
-    font-family: 'Montserrat', sans-serif;
-}
-.menu ul li{
-    display: inline-block;
-    padding: 1vw;
-}
-.menu ul li:hover{
-    /* background-color: white; */
-    color: gray;
-}
-.menu ul li a{
-    padding: 1vw;  
-    text-decoration: none;
-}
-.menu ul li a:hover{
-    background-color: white;
-    color: gray;
-}
 .text.container{
     padding: 5vw;
     text-align: center;
