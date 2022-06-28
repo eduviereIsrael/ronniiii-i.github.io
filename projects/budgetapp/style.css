@@ -11,14 +11,19 @@
 .content{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .content .container{
     padding: 1vw;
     border: 1px solid #800080;
     margin: .3vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
 }
 .content .container:nth-child(odd) {
     width: calc(30% - 1.3vw);
+    flex-direction: column;
 }
 .content .container:nth-child(even) {
     width: calc(70% - 1.3vw);
