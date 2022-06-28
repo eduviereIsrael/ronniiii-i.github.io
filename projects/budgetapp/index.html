@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/992b6cd049.js" crossorigin="anonymous"></script>
+    <title>Budget App</title>
+</head>
+<body>
+    <h1>The Budget App</h1>
+    <div id="budgetInput" class="container">
+        <label for="budgetInput">Enter Budget Amount</label>
+        <input type="number" name="budgetinput" id="budgetInput" min="0">
+        <button onclick="displayBudget()">Calculate Balance</button>
+    </div>
+    <div id="budgetOutput" class="container">
+        <div class="display">
+            <h2>Budget</h2>
+            <i class="fa-solid fa-coins"></i>
+            <p>$<span id="budgetDisplay"></span></p>
+        </div>
+        <div class="display"></div>
+        <div class="display"></div>
+    </div>
+    <div class="container"></div>
+    <div class="container"></div>
+    
+</body>
+</html>
