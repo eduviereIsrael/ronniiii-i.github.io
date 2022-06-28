@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Course List</title>
+</head>
+<body>
+    <div class="top">
+        <img src="icons/book.png">
+        <h1>My <span class="green">Courses</span> List App</h1>
+    </div>
+
+    <div class="container">
+        <span id="alertt" class="alert" role="alert">Added to Courses List!</span>
+        <div class="space"></div>
+        <div class="input">
+            <label for="courseName">Enter Course Name</label>
+            <input type="text" id="courseName" class="form-design" required>
+        </div>
+        <div class="input">
+            <label for="courseDescription">Enter Course Description</label>
+            <textarea class="form-design" id="courseDescription" required=""></textarea>
+        </div>
+        <div class="input">
+            <label for="courseCode">Enter Course Code</label>
+            <input type="text" id="courseCode" class="form-design" required>
+        </div>
+
+        <div class="bg"><button type="submit" class="btn" id="submit" onclick="display()">Submit</button></div>
+    </div>
+
+    <table id="courseDetails">
+        <thead>
+            <tr>
+                <th>Course Name</th>
+                <th>Course Description</th>
+                <th>Course Code</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="tbodyy">
+            
+        </tbody>
+    </table>
+
+    <script>
+
+var title = document.querySelector("#courseName");
+var description = document.querySelector("#courseDescription");
+var code = document.querySelector("#courseCode");
+
+var courses = [];
+
+var tbody = document.getElementById('tbodyy');
+
+var type
+var index
+
+
+function displayCourses() {
+    tbody.innerHTML="";
+    var htmlCode = "";
+
+    for (let i = 0; i < courses.length; i++) {
+        htmlCode+= `<tr> <td> ${courses[i].nameOfCourse} </td> <td> ${courses[i].descriptionOfCourse} </td> <td> ${courses[i].codeOfCourse} </td> <td><button onclick='edit(${i})' class='btn edit'>Edit</button></td> <td><button onclick='del(${i})' class='btn delete'>Delete</button></td> </tr>`; 
+        
+    }
+    return tbody.innerHTML = htmlCode;
+}
+function removeAlert() {
+    alertt.classList.remove("alerting")
+}
+
+function display() {
+    if (title.value !== null && description.value !== null && code.value !== null && type !== 'edit') {
+        var course = {nameOfCourse: title.value, descriptionOfCourse: description.value, codeOfCourse: code.value};
+        courses.push(course);
+        displayCourses();
+    }
+    else if (type =='edit') {cons
+        const newObj = {nameOfCourse: title.value, descriptionOfCourse: description.value, codeOfCourse: code.value};
+        courses.splice(index, 1, newObj);
+        displayCourses();
+        var alertt = document.getElementById('alertt');
+        alertt.innerHTML="Course Edited"
+    }
+    title.value="";
+    description.value="";
+    code.value="";
+    var alertt = document.getElementById('alertt');
+    alertt.classList.add("alerting");
+    window.setTimeout(removeAlert,3000);
+}
+
+function edit(theIndex) {
+        let i = theIndex;
+        title.value = courses[i].nameOfCourse;
+        description.value = courses[i].descriptionOfCourse;
+        code.value = courses[i].codeOfCourse; 
+    type = 'edit';
+    index = i;
+}
+
+function del(theIndex) {
+    let i = theIndex;
+    courses.splice(i,1);
+    displayCourses();
+    var alertt = document.getElementById('alertt');
+    alertt.innerHTML="Course Deleted"
+    alertt.classList.add("alerting");
+    window.setTimeout(removeAlert,3000);
+}
+    </script>
+</body>
+</html>
