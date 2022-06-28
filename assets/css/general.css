@@ -88,6 +88,9 @@ a{
         height: 100vh;
         position: fixed;
         top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .menu ul li{
         display: block;
