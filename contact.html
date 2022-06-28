@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="../assets/css/contact.css">
     <link rel="shortcut icon" href="..assets/img/favicon.ico" type="image/x-icon">
     <script defer src="../assets/js/contact.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+    async defer></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
@@ -32,6 +34,11 @@
             });
         }
     </script>
+    <script type="text/javascript">
+        var onloadCallback = function() {
+          alert("grecaptcha is ready!");
+        };
+      </script>
     <title>Contact Roni</title>
 </head>
 <body>
@@ -87,6 +94,7 @@
                     <textarea id="message" placeholder="Finally your message" name="message"></textarea>
                 </div>
             </div>
+            <div class="g-recaptcha" data-sitekey="6LeV7aUgAAAAAEdpmQz8V68qqvwX0Pq_YUUXpvym"></div>
             <div class="buttons">
                 <button>Next</button>
                 <input type="submit" value="Send your message">
