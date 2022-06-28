@@ -17,9 +17,9 @@
     border: 1px solid #800080;
     margin: .3vw;
 }
-.content .container:nth-child(odd){
-    width: 30%
+.content .container:nth-child(odd) {
+    width: 30%;
 }
-.content .container:nth-child(even){
-    width: 70%
+.content .container:nth-child(even) {
+    width: 70%;
 }
