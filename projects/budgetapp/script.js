@@ -7,5 +7,6 @@ const expenseAmount = document.querySelector('#expenseAmount');
 
 function displayBudget() {
     budgetDisplay.innerHTML = budgetInput.value;
+    balanceDisplay.innerHTML = budgetDisplay.innerHTML - expenseDisplay.innerHTML;
 };
 function addExpense() {};
