@@ -12,6 +12,17 @@ h1{
     text-align: center;
     padding: 1.5vw;
 }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 .content{
     display: flex;
     flex-wrap: wrap;
@@ -34,8 +45,15 @@ h1{
 .content .container:nth-child(odd) *{
     margin: .5vw 0;
 }
+.content .container:nth-child(odd) label{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
 .content .container:nth-child(odd) input{
     border: 1px solid #800080;
+    width: 80%;
+    padding: 0.3vw;
+    border-radius: 3px;
 }
 .content .container:nth-child(odd) button{
     border: none;
@@ -44,7 +62,21 @@ h1{
     padding: 1vw;
     margin: 1vw 0;
     width: 80%;
+    font-size: 1.1rem;
 }
 .content .container:nth-child(even) {
     width: 65%;
+}
+.content .container table{
+    width: 100%
+}
+.content .container table tr th{
+    text-align: left;
+}
+.content .container table tr th:nth-child(1),
+.content .container table tr th:nth-child(2){
+    width: 40%;
+}
+.content .container table tr th:nth-child(3), .content .container table tr th:nth-child(4) {
+    width: 10%;
 }
