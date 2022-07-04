@@ -64,6 +64,9 @@ input[type=number] {
     width: 80%;
     font-size: 1.1rem;
 }
+.content .container:nth-child(odd) button:hover{
+    background-color: #6d006d;
+}
 .content .container:nth-child(even) {
     width: 65%;
 }
