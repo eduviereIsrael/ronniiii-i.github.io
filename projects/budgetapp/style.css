@@ -32,7 +32,10 @@ h1{
     flex-direction: column;
 }
 .content .container:nth-child(odd) *{
-    margin: .2vw 0;
+    margin: .5vw 0;
+}
+.content .container:nth-child(odd) input{
+    border: 1px solid #800080;
 }
 .content .container:nth-child(odd) button{
     border: none;
