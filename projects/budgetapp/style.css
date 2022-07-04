@@ -80,3 +80,6 @@ input[type=number] {
 .content .container table tr th:nth-child(3), .content .container table tr th:nth-child(4) {
     width: 10%;
 }
+.content .container table .scroll{
+    overflow-y: auto;
+}
