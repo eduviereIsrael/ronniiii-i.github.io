@@ -9,6 +9,8 @@ const tbody = document.querySelector('#tbodyy');
 
 var titles = []
 var expenses = []
+var type
+var index
 
 function displayBudget() {
     budgetDisplay.innerHTML = budgetInput.value;
