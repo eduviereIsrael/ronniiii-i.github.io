@@ -77,12 +77,27 @@ input[type=number] {
     text-align: left;
 }
 .content .container table tr th:nth-child(1),
+.content .container table tr td:nth-child(1),
+.content .container table tr td:nth-child(2),
 .content .container table tr th:nth-child(2){
     width: 40%;
 }
-.content .container table tr th:nth-child(3), .content .container table tr th:nth-child(4) {
+.content .container table tr th:nth-child(3), 
+.content .container table tr td:nth-child(3), 
+.content .container table tr td:nth-child(4), 
+.content .container table tr th:nth-child(4) {
     width: 10%;
 }
 .content .container table .scroll{
-    overflow-y: auto;
+    display: block;
+    height: 30vh;
+    overflow: auto;
+}
+thead, tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+thead {
+    width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
 }
