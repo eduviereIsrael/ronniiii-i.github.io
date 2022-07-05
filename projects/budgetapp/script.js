@@ -41,7 +41,7 @@ function displayExpenses() {
         htmlCode += `<tr>
         <td>${titles[i]}</td>
         <td>${expenses[i]}</td>
-        <td><i class="far fa-edit" onclick=edit(${i})></i></td>
+        <td><i class="fas fa-edit" onclick=edit(${i})></i></td>
         <td><i class="fas fa-minus-circle" onClick=del(${i})></i></td>
         </tr>`; 
     }
