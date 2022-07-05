@@ -48,10 +48,11 @@ input[type=number] {
 .content .container:nth-child(odd) label{
     font-weight: bold;
     font-size: 1.1rem;
+    text-align: center;
 }
 .content .container:nth-child(odd) input{
     border: 1px solid #800080;
-    width: 80%;
+    width: 100%;
     padding: 0.3vw;
     border-radius: 3px;
 }
@@ -61,7 +62,7 @@ input[type=number] {
     color: white;
     padding: 1vw;
     margin: 1vw 0;
-    width: 80%;
+    width: 100%;
     font-size: 1.1rem;
 }
 .content .container:nth-child(odd) button:hover{
@@ -100,4 +101,15 @@ thead, tbody tr {
 }
 thead {
     width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width */
+}
+@media screen and (max-width: 800px) {
+    .content{
+        flex-direction: column;
+    }
+    .container:nth-child(even){
+        width: 60%;
+    }
+    .container:nth-child(odd){
+        width: 90%;
+    }
 }
