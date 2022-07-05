@@ -105,11 +105,18 @@ thead {
 @media screen and (max-width: 800px) {
     .content{
         flex-direction: column;
+        width: 100%;
+        align-items: center;
     }
-    .container:nth-child(even){
+    .content .container:nth-child(even){
+        width: 90%;
+    }
+    .content .container:nth-child(odd){
         width: 60%;
     }
-    .container:nth-child(odd){
-        width: 90%;
+}
+@media screen and (max-width: 450px){
+    .content .container:nth-child(2){
+        flex-direction: column;
     }
 }
