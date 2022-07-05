@@ -87,7 +87,7 @@ function addExpense() {
     for (const expense of expenses) {
         totalexpense+= expense 
     }
-    document.getElementById("figure2").innerHTML= totalexpense
+    expenseDisplay.innerHTML= totalexpense
 
     balance()
     expenseName.value = " "
