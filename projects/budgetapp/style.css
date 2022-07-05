@@ -118,5 +118,6 @@ thead {
 @media screen and (max-width: 450px){
     .content .container:nth-child(2){
         flex-direction: column;
+        text-align: center;
     }
 }
