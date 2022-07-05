@@ -17,8 +17,5 @@
 ## 📝 License
 
 Copyright © 2022 [Roni](https://github.com/ronniiii-i).<br/>
-This project is [<%= licenseName %>](<%= licenseUrl %>) licensed.
-<% } -%>
 
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+
