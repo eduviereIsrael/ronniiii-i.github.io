@@ -34,7 +34,7 @@ body{
     letter-spacing: 1px;
 }
 .text .widget a:hover{
-    background-color: white;
+    background-color: transparent;
     color: grey;
 }
 .text .socials a{
