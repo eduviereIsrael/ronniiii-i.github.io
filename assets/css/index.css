@@ -9,6 +9,10 @@ body{
     padding: 1vw;
     font-family: 'Montserrat', sans-serif;
 }
+.text .widget img{
+    width: 70px;
+    border-radius: 10000px;
+}
 .text .widget h2{
     font-size: 200%;
 }
