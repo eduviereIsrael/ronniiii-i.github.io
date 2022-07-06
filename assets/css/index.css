@@ -33,3 +33,13 @@ body{
     background-color: white;
     color: grey;
 }
+.text .socials a{
+    text-decoration: none;
+    border: none;
+    padding: 0;
+    transition: all 0.3s;
+}
+.text .socials a:hover{
+    background-color: none;
+    /* color: white; */
+}
