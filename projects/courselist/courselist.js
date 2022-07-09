@@ -1,4 +1,5 @@
 var page = document.querySelector(".overlay");
+var pageContent = document.querySelector("#page");
 var toggleSwitch = document.querySelector(".darkbtn");
 var title = document.querySelector("#courseName");
 var description = document.querySelector("#courseDescription");
@@ -103,4 +104,3 @@ remove.addEventListener('click', () =>{
 function download() {
     console.log(courses);
 }
-console.log('yoho', courses);
