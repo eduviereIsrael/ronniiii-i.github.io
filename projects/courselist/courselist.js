@@ -39,8 +39,8 @@ function displayCourses() {
         <td> ${courses[i].nameOfCourse} </td> 
         <td> ${courses[i].descriptionOfCourse} </td> 
         <td> ${courses[i].codeOfCourse} </td>
-        <td><i class="fas fa-edit" onclick=edit(${i})>e</i></td>
-        <td><i class="fas fa-minus-circle" onclick=del(${i})>d</i></td> 
+        <td><i class="fas fa-edit" onclick=edit(${i})></i></td>
+        <td><i class="fas fa-minus-circle" onclick=del(${i})></i></td> 
         </tr>`; 
         bodyCode+= `<tr> 
         <td> ${courses[i].nameOfCourse} </td> 
