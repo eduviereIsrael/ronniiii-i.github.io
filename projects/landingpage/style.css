@@ -14,10 +14,6 @@
     justify-content: space-between;
     align-items: center;
     color: #96a2b8;
-    right: 0px;
-    left: 0px;
-    top: 0px;
-    bottom: 0px;
     padding: 0vw 1vw;
 }
 .top.container a{
@@ -38,13 +34,13 @@
 .top .right{
     display: flex;
     justify-content: space-evenly;
-    width: 50%;
+    /* width: 50%; */
 }
 .top .right a{
     padding: 2vw;
     text-align: center;
 }
-.top .right a:hover{
+.top a:hover{
     color: #ffffff;
 }
 .top .right a.portal{
@@ -64,21 +60,24 @@
 .navigation .left{
     display: flex;
     justify-content: flex-start;
-    bottom: 0px;
+    width: 30%
 }
 .navigation .left img{
     padding: 1vw;
+    max-width: 300px;
+    width: 100%;
 }
 .navigation .right{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    width: 65%
 }
 .navigation .right a{
     color: #163269;
     font-size: 16px;
     text-decoration: none;
     font-weight: 600;
-    padding: 2vw 1vw;
+    padding: 2vw 0vw;
     transition: color 0.2s linear,background 0.2s linear,border-color 0.2s linear, text-shadow 0.2s linear;
     border-bottom: 5px solid transparent;
 }
@@ -105,14 +104,14 @@
     align-items: center;
 }
 .main .inner .left.call{
-    width: 65%;
+    width: 60%;
 }
 .main .inner .left.call .widget{
     padding: 1vw;
 }
 .main .inner .left.call .widget h3{
     font-size: 24px;
-    color: #3db166;
+    color: #fff;
     font-weight: 900;
 }
 .main .inner .left.call .widget h1{
@@ -124,11 +123,21 @@
 }
 .main .inner .left.call .widget.link a{
     padding: 14px 14px;
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
+    background: linear-gradient(to right, #3db166 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
     color: #2d2d2d;
     text-decoration: none;
     font-weight: 700;
     border-left: 5px #3db166 solid;
+    /* transition: background-color .7s linear; */
+}
+.main .inner .left.call .widget.link a:hover{
+    background-position: left bottom;
+    border: none;
+    color: white;
 }
 .main .inner .right.enquire{
     background-color: #ffffff;
@@ -139,7 +148,7 @@
     align-items: center;
     justify-content: space-evenly;
     padding: 2vw;
-    width: 30%;
+    width: 35%;
     margin-left: 4vw;
 }
 .main .inner .right.enquire .widget{
