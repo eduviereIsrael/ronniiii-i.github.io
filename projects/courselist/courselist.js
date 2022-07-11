@@ -3,7 +3,7 @@
 // var doc = new jsPDF();
 
 var page = document.querySelector(".overlay");
-var pageContent = document.querySelector("#page");
+var pageContent = document.querySelector("#content");
 var toggleSwitch = document.querySelector(".darkbtn");
 var title = document.querySelector("#courseName");
 var description = document.querySelector("#courseDescription");
@@ -103,6 +103,8 @@ function del(theIndex) {
 
 function clearAll() {
     // console.log(courses.values);
+    courses = [];
+    displayCourses()
 }
 function preview() {
     page.classList.add('show');
