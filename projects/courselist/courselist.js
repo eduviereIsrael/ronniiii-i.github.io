@@ -1,3 +1,7 @@
+// import {jsPDF} from jspdf;
+
+// var doc = new jsPDF();
+
 var page = document.querySelector(".overlay");
 var pageContent = document.querySelector("#page");
 var toggleSwitch = document.querySelector(".darkbtn");
@@ -106,6 +110,13 @@ function preview() {
 remove.addEventListener('click', () =>{
     page.classList.remove('show')
 })
+// function download() {
+//     console.log(courses);
+// }
 function download() {
-    console.log(courses);
-}
+    var doc = new jsPDF();  //create jsPDF object
+     doc.fromHTML(pageContent), // page element which you want to print as PDF
+    //  
+     doc.save("courses.pdf"); // save file name as courses.pdf
+    //  console.log('heuu')
+   }
