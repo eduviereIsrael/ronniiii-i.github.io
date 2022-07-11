@@ -18,6 +18,7 @@ window.onload = () => {
     alert('Note: All data clears on reload');
 }
 
+
 toggleSwitch.addEventListener('click', () => {
     // // console.log(document.styleSheets.item(0).href.replace('style.css', 'dark.css'));
     // document.styleSheets.item(0).href.replace('style.css', 'dark.css')
