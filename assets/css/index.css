@@ -1,5 +1,5 @@
 body{
-    height: 100vh;
+    height: 100%;
 }
 .text.container{
     padding: 5vw;
@@ -63,4 +63,10 @@ body{
 }
 .text .socials a i.fa-envelope:hover{
     color: #EA4335;
+}
+
+@media screen and (max-width: 500px){
+    /* body{
+        height: 100vh;
+    } */
 }

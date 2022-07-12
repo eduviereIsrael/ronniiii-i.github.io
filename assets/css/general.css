@@ -9,6 +9,12 @@
 *, *::after, *::before{
     box-sizing: border-box;
 }
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+}
 body{
     background-position: center;
     background-repeat: no-repeat;
@@ -75,8 +81,11 @@ a{
     transform: rotate(-405deg) translate(-5px,5px);
 }
 .menu.container{
+    position: absolute;
     padding: 2vw;
-    align-self: flex-end;
+    top: 0;
+    right: 0;
+    /* align-self: flex-end; */
     font-family: 'Montserrat', sans-serif;
 }
 .menu.container.show{
