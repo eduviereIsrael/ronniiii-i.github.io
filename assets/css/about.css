@@ -7,3 +7,18 @@
     width: 50%;
     text-align: center;
 }
+.fa-twitter:hover{
+    color: #1DA1F2;
+}
+.fa-linkedin-in:hover{
+    color: #0e76a8;
+}
+.fa-github:hover{
+    color: #171515;
+}
+.fa-instagram:hover{
+    color: #d6249f;
+}
+.fa-envelope:hover{
+    color: #EA4335;
+}
