@@ -77,12 +77,13 @@ a{
 .menu.container{
     padding: 2vw;
     align-self: flex-end;
-    font-family: 'Montserrat', sans-serif;transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+    font-family: 'Montserrat', sans-serif;
 }
 .menu.container.show{
     display: flex;
     top: 0;
-    /* bottom: 0; */
+    height: 100%;
+    opacity: 1;
 }
 .menu ul li{
     display: inline-block;
@@ -106,16 +107,19 @@ a{
         display: flex;
     }
     .menu.container{
-        background-color: #000000e1;
+        background-color: #000000e7;
         width: 100%;
-        left: 0;
-        right: 0;
+        height: 0px;
         top: -100%;
         position: fixed;
         display: none;
         justify-content: center;
         align-items: center;
-        /* transition: 700ms cubic-bezier(0, 0, 0.2, 1) 0ms; */
+        transition: all .7s;
+        opacity: 0;
+    }
+    .menu ul{
+        transition: 700ms cubic-bezier(0, 0, 0.2, 1) 0ms;
     }
     .menu ul li{
         display: block;
