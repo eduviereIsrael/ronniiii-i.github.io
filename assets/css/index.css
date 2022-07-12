@@ -45,7 +45,7 @@ body{
     margin: 0 .3vw;
 }
 .text .socials a:hover{
-    background-color: none;
+    background-color: transparent;
     /* color: white; */
 }
 .text .socials a i.fa-twitter:hover{
@@ -56,4 +56,11 @@ body{
 }
 .text .socials a i.fa-github:hover{
     color: #171515;
+}
+.text .socials a i.fa-instagram:hover{
+    /* background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%); */
+    color: #d6249f;
+}
+.text .socials a i.fa-envelope:hover{
+    color: #EA4335;
 }
