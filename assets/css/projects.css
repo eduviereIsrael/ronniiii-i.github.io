@@ -20,7 +20,7 @@
     margin: 1vw 1vw;
     text-align: center;
     height: 200px;
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     /* background-color: violet; */
@@ -28,33 +28,18 @@
 }
 .project .project_card.card1{
     background-image: url('../thumbs/beautynewsletter.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 .project .project_card.card2{
     background-image: url('../thumbs/courselist.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 .project .project_card.card3{
     background-image: url('../thumbs/comingsoon.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 .project .project_card.card4{
-    background-image: url('../thumbs/soldout.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: url('../thumbs/budgetapp.png');
 }
 .project .project_card.card5{
-    background-image: url('../thumbs/budgetapp.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    /* background-image: url('../thumbs/budgetapp.png'); */
 }
 .project .project_card .card-content{
     height: 200px;

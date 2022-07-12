@@ -111,8 +111,26 @@ section{
     font-size: 18px;
     font-family: 'Lora', serif;
 }
-.top .main .widget h1{
-    font-size: 88px;
+.top .main .countdown{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2vw;
+}
+.top .main .time-section{
+    padding: 22px 0px;
+    width: auto;
+}
+.top .main .time span{
+    font-size: 80px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+.top .main .name span{
+    font-size: 16px;
+    font-weight: 700;
     font-family: 'Montserrat', sans-serif;
 }
 .top .main .widget hr{
@@ -302,8 +320,11 @@ section{
     .top .main .widget p{
         font-size: 16px;
     }
-    .top .main .widget h1{
-        font-size: 68px;
+    .top .main .time span{
+        font-size: 60px;
+    }
+    .top .main .name span{
+        font-size: 12px;
     }
     .top .main .widget a{
         font-size: 18px;
@@ -325,10 +346,23 @@ section{
     .top .main .widget{
         padding: 8vw;
     }
-    .top .main .widget h1{
-        font-size: 52px;
-    } 
     .popup h1{
         font-size: 30px;
+    }
+}
+@media screen and (max-width: 450px){
+    .top .main .time span{
+        font-size: 34px;
+    }
+    .top .main .name span{
+        font-size: 8px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .top .main .countdown{
+        flex-direction: column;
+    }
+    .top .main .time-section{
+        padding: 11px 0px;
     }
 }
