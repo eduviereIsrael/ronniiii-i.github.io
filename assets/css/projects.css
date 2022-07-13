@@ -27,19 +27,22 @@
     transition: all 0.5s;
 }
 .project .project_card.card1{
-    background-image: url('../thumbs/beautynewsletter.png');
+    background-image: url('../thumbs/desktop/beautynewsletter.png');
 }
 .project .project_card.card2{
-    background-image: url('../thumbs/courselist.png');
+    background-image: url('../thumbs/desktop/courselist.png');
 }
 .project .project_card.card3{
-    background-image: url('../thumbs/comingsoon.png');
+    background-image: url('../thumbs/desktop/comingsoon.png');
 }
 .project .project_card.card4{
-    background-image: url('../thumbs/budgetapp.png');
+    background-image: url('../thumbs/desktop/budgetapp.png');
 }
 .project .project_card.card5{
-    /* background-image: url('../thumbs/budgetapp.png'); */
+    /* background-image: url('../thumbs/desktop/homesmart.png'); */
+}
+.project .project_card.card6{
+    background-image: url('../thumbs/desktop/homesmart.png');
 }
 .project .project_card .card-content{
     height: 200px;
