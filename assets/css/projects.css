@@ -1,10 +1,10 @@
 .title.container{
-    padding: 0vw 2vw;
+    padding: 8vw 2vw 0vw;
     width: 65%;
     font-family: 'Montserrat', sans-serif;
 }
 .title h1{
-    font-size: 3vw;
+    /* font-size: 3vw; */
     padding: 1vw;
 }
 .project.container{
@@ -39,7 +39,7 @@
     background-image: url('../thumbs/desktop/budgetapp.png');
 }
 .project .project_card.card5{
-    /* background-image: url('../thumbs/desktop/homesmart.png'); */
+    background-image: url('../thumbs/desktop/chaeboluni.png');
 }
 .project .project_card.card6{
     background-image: url('../thumbs/desktop/homesmart.png');
@@ -78,4 +78,71 @@
 }
 .project .project_card .card-content a:hover{
     background: linear-gradient(to right, #000000c0, #242424b0);
+}
+@media screen and (max-width: 1100px) {
+    .title.container,
+    .project.container{
+        width: 75%;
+    }
+}
+@media screen and (max-width: 850px){
+    .title.container,
+    .project.container{
+        width: 85%;
+    }
+    .project .project_card.card1{
+        background-image: url('../thumbs/tab/beautynewsletter.png');
+    }
+    .project .project_card.card2{
+        background-image: url('../thumbs/tab/courselist.png');
+    }
+    .project .project_card.card3{
+        background-image: url('../thumbs/tab/comingsoon.png');
+    }
+    .project .project_card.card4{
+        background-image: url('../thumbs/tab/budgetapp.png');
+    }
+    .project .project_card.card5{
+        background-image: url('../thumbs/tab/chaeboluni.png');
+    }
+    .project .project_card.card6{
+        background-image: url('../thumbs/tab/homesmart.png');
+    }
+}
+@media screen and (max-width: 500px){
+    .title.container{ 
+        padding-top: 1vw;
+    }
+    .title.container,
+    .project.container{
+        width: 95%;
+    }
+    .project .project_card.card1{
+        background-image: url('../thumbs/mobile/beautynewsletter.png');
+    }
+    .project .project_card.card2{
+        background-image: url('../thumbs/mobile/courselist.png');
+    }
+    .project .project_card.card3{
+        background-image: url('../thumbs/mobile/comingsoon.png');
+    }
+    .project .project_card.card4{
+        background-image: url('../thumbs/mobile/budgetapp.png');
+    }
+    .project .project_card.card5{
+        background-image: url('../thumbs/mobile/chaeboluni.png');
+    }
+    .project .project_card.card6{
+        background-image: url('../thumbs/mobile/homesmart.png');
+    }
+}
+@media screen and (max-width: 320px){
+    .project.container{
+        width: 95%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .project .project_card{
+        /* width: 70%; */
+    }
 }

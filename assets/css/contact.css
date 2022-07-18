@@ -1,6 +1,6 @@
 
 .title.container{
-    padding: 2vw 5vw;
+    padding: 8vw 5vw 2vw;
     width: 60%;
     font-family: 'Montserrat', sans-serif;
 }
@@ -25,16 +25,27 @@
     font-size: .8vw;
     font-family: 'Montserrat', sans-serif;
     border-radius: 5px;
+    display: none;
+    cursor: pointer;
+}
+.form .tabs .tab:hover{
+    outline: 1px solid white;
+}
+.form .tabs .tab.show{
+    display: block;
 }
 .form .inputs{
     padding: 1vw 0;
 }
 .form .inputs .widget{
-    display: flex;
+    display: none;
     width: 100%;
     text-align: center;
     padding: 1vw 0 0;
     border-bottom: 1px solid #898987;
+}
+.form .inputs .widget.show{
+    display: flex;
 }
 .form .inputs .widget i{
     width: 5%;
@@ -56,7 +67,7 @@
     border: none;
     font-size: 1.2vw;
     padding: 1vw 0;
-    height: 1.2em;
+    max-height: 150px;
     font-family: 'Montserrat', sans-serif;
 }
 .form .buttons{

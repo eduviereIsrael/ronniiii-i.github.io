@@ -10,7 +10,6 @@
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
     <script defer src="assets/js/general.js"></script>
     <script defer src="/assets/js/contact.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
@@ -42,7 +41,7 @@
     <title>Contact Roni</title>
 </head>
 <body>
-    <div class="burger">
+    <div id="burger">
         <div class="line line1"></div>
         <div class="line line2"></div>
         <div class="line line3"></div>
@@ -68,35 +67,34 @@
             <div class="tabs">
                 <div class="tab tab1">
                     <i class="fas fa-user"></i>
-                    <span id="tabName">Input your name</span>
+                    <span id="tabName"></span>
                 </div>
                 <div class="tab tab2">
                     <i class="fas fa-envelope"></i>
-                    <span id="tabEmail">Now your email</span>
+                    <span id="tabEmail"></span>
                 </div>
                 <div class="tab tab3">
                     <i class="fas fa-sticky-note"></i>
-                    <span id="tabMessage">Finally your message</span>
+                    <span id="tabMessage"></span>
                 </div>
             </div>
             <div class="inputs">
                 <input type="hidden" name="contact_number">
-                <div class="widget">
+                <div class="widget show">
                     <i class="fas fa-user"></i>
-                    <input type="text" placeholder="Input your name" id="name" name="user_name">
+                    <input type="text" placeholder="Input your name" id="name" name="details">
                 </div>
                 <div class="widget">
                     <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Now your email" id="email" name="user_email">
+                    <input type="email" placeholder="Now your email" id="email" name="details">
                 </div>
                 <div class="widget">
                     <i class="fas fa-sticky-note"></i>
-                    <textarea id="message" placeholder="Finally your message" name="message"></textarea>
+                    <textarea id="message" placeholder="Finally your message" name="details"></textarea>
                 </div>
             </div>
-            <div class="g-recaptcha" data-sitekey="6LeV7aUgAAAAAEdpmQz8V68qqvwX0Pq_YUUXpvym"></div>
             <div class="buttons">
-                <button>Next</button>
+                <button onclick="next()">Next</button>
                 <input type="submit" value="Send your message">
             </div>
         </form>

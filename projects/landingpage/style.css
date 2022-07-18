@@ -15,6 +15,7 @@
     align-items: center;
     color: #96a2b8;
     padding: 0vw 1vw;
+    flex-wrap: wrap;
 }
 .top.container a{
     font-size: 15px;
@@ -25,7 +26,7 @@
 .top .left{
     display: flex;
     justify-content: flex-start;
-    width: 50%;
+    /* width: 50%; */
     bottom: 0px;
 }
 .top .left .widget{
@@ -91,6 +92,38 @@
 .navigation .right a.search:active{
     border-bottom-color: transparent;
 }
+#burger{
+    width: 30px;
+    height: 30px;
+    display: none;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
+    z-index: 4;
+    cursor: pointer;
+}
+#burger .line{
+    width: 100%;
+    height: 2px;
+    background-color: #3db166;
+    transition: all .8s;
+}
+#burger .line.white{
+    background-color: white;
+}
+.disappear{
+    opacity: 0;
+}
+.rot1{
+    transform: rotate(405deg) translate(-5px,-6px);
+}
+.rot2{
+    transform: rotate(-405deg) translate(-5px,5px);
+}
+.navigation .right.show{
+    top: 0;
+    height: 100%;
+    opacity: 1;
+}
 .main.container{
     background-image: radial-gradient(rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.4)),url(img/bg.jpg);
     padding: 5vw 1vw;
@@ -132,7 +165,7 @@
     text-decoration: none;
     font-weight: 700;
     border-left: 5px #3db166 solid;
-    /* transition: background-color .7s linear; */
+    display: inline-block;
 }
 .main .inner .left.call .widget.link a:hover{
     background-position: left bottom;
@@ -251,11 +284,14 @@
     border-bottom: 1px solid #3db166;
     width: 100%;
 }
+.details .left.menu ul.nav li:nth-last-child(1){
+    border-bottom: none;
+}
 .details .left.menu ul.nav {
     list-style: none;
     border: 1px solid #3db166;
     width: 100%;
-    height: 300px;
+    /* height: 300px; */
 }
 .details .left.menu ul.nav li a{
     text-decoration: none;
@@ -330,11 +366,11 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding: .3vw 1.5vw;
+    /* padding: .3vw 1.5vw; */
 }
 .courses .left.cards .card .text .widget{
     color: #4e4e4e;
-    padding: .5vw 1vw;
+    padding: .3vw 1vw;
 }
 .courses .left.cards .card .text .widget.date{
     padding-bottom: 1vw;
@@ -367,6 +403,7 @@
     border: 3px #3db166 solid;
     transition: color 0.2s linear,background 0.2s linear,border-color 0.2s linear, text-shadow 0.2s linear;
     font-size: 14px;
+    display: inline-block;
 }
 .courses .left.cards .card .widget.link a:hover{
     background-color: #3db166;
@@ -406,11 +443,11 @@
     margin-bottom: 1vw;
     transition: color 0.2s linear,background 0.2s linear,border-color 0.2s linear, text-shadow 0.2s linear;
     color: #3db166;
+    font-size: 13px;
 }
 .courses .right.programmes .widget .faculties a{
     color: #3db166;
     padding: 10px 14px;
-    font-size: 13px;
     font-weight: 600;
     width: 100%;
     text-decoration: none;
@@ -432,7 +469,7 @@
     background-color:#3db166;
 }
 .courses .right.programmes .widget .faculties .dropdown{
-    padding: 1vw;
+    padding: 10px 14px;
     display: none;
 }
 .courses .right.programmes .widget .faculties .show{
@@ -504,7 +541,7 @@
     padding: 3vw;
 }
 .footer .inner .column{
-    width: 23%;
+    width: 30%;
 }
 .footer .inner .column .widget{
     padding: 1vw;
@@ -512,6 +549,7 @@
 .footer .inner .column1 .widget img{
     background-color: #fff;
     padding: .5vw;
+    width: 100%;
 }
 .footer .inner .column .widget h1{
     color: #fff;
@@ -547,8 +585,7 @@
 .footer .inner .column .widget ul li{
     margin-bottom: 1vw;
 }
-.footer .inner .column3 .widget ul li,
-.footer .inner .column4 .widget ul li{
+.footer .inner .column3 .widget ul li{
     text-transform: uppercase;
 }
 .copyright.container{
@@ -571,4 +608,187 @@
 .copyright .right .icons i{
     font-size: 20px;
     padding: 1vw;
+}
+@media screen and (max-width: 900px){
+    .navigation.container{
+        flex-direction: column;
+        align-items: flex-start;
+        height: fit-content;
+    }
+    .navigation .left img{
+        padding: 1vw;
+        max-width: 300px;
+        width: 200%;
+    }
+    .navigation .right{
+        align-self: flex-end;
+        width: 90%;
+        border-top: 2px solid #3db166;
+    }
+    .main .inner .left.call .widget h1{
+        font-size: 28px;
+    }
+    .main .inner .left.call{
+        width: 50%;
+    }
+    .main .inner .right.enquire{
+        width: 45%;
+    }
+    .cta .inner .widget{
+        width: 60%;
+    }
+    .details .left.menu{
+        width: 30%;
+    }
+    .details .right.content{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 69%;
+    }
+    .details .right.content .image img{
+        width: 100%;
+        max-width: 350px;
+    }
+    .courses .left.cards,
+    .courses .right.programmes{
+        width: 50%;
+    }
+        
+}
+@media screen and (max-width: 750px){
+    .main .inner .left.call .widget h1{
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 670px){
+    .main .inner{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .main .inner .left.call,
+    .main .inner .right.enquire{
+        margin: 2vw 1vw;
+    }
+    .main .inner .left.call{
+        width: 65%;
+    }
+    .main .inner .right.enquire{
+        width: 65%;
+    }
+    .cta .inner .widget{
+        width: 70%;
+    }
+    .courses.container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .courses .left.cards,
+    .courses .right.programmes{
+        width: 80%;
+    }
+    .courses .left.cards .card .text .widget {
+        padding: 0.7vw 2vw;
+    }
+}
+@media screen and (max-width: 630px){
+    .navigation .right{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 600px){
+    .details .left.menu{
+        width: 40%;
+    }
+    .details .right.content{
+        width: 59%;
+    }
+    .details .right.content .image img{
+        max-width: 250px;
+    }
+}
+@media screen and (max-width: 550px){
+    #burger{
+        display: flex;
+    }
+    .navigation.container{
+        flex-direction: row;
+        align-items: center;
+        /* height: fit-content; */
+    }
+    .navigation .left img {
+        max-width: 250px;
+        width: 150%;
+    }
+    .navigation .right{
+        background-color: #000000e7;
+        width: 100%;
+        height: 0px;
+        top: -100%;
+        left: 0;
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 700ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+        opacity: 0;
+        border: none;
+    }
+    .navigation .right a{
+        color: #fff;
+    }
+    .cta .inner .widget{
+        width: 90%;
+    }
+    .details.container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .details .left.menu{
+        width: 50%;
+        padding: 1vw;
+    }
+    .details .right.content{
+        width: 80%;
+        align-items: center;
+        text-align: center;
+        padding: 1vw;
+    }
+    .suscribe .widget{
+        width: 100%;
+    }
+    .suscribe .widget .submit{
+        overflow: hidden;
+    }
+    .suscribe .widget .submit a{
+        width: fit-content;
+    }
+    .footer .inner{
+        flex-direction: column;
+    }
+    .footer .inner .column{
+        width: 100%;
+        padding: 2vw 1vw;
+    }
+    .footer .inner .column1 .widget img{
+        width: 60%;
+        min-width: 300px;
+    }
+}
+@media screen and (max-width: 500px){
+    .main .inner .left.call,
+    .main .inner .right.enquire{
+        width: 80%;
+    }
+    .courses .left.cards, .courses .right.programmes{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 450px){
+    .cta .inner{
+        width: 90%;
+    }
+    .details .left.menu{
+        width: 70%;
+    }
 }
