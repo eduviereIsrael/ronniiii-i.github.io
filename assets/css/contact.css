@@ -5,11 +5,11 @@
     font-family: 'Montserrat', sans-serif;
 }
 .title .widget h1{
-    font-size: 3vw;
+    font-size: 35px;
 }
 .title .widget p{
     line-height: 1.5;
-    font-size: 1.3vw;
+    font-size: 16px;
 }
 .form.container{
     width: 60%;
@@ -22,17 +22,18 @@
     padding: .5vw;
     margin: 0 5px;
     background-color: #898987;
-    font-size: .8vw;
+    font-size: 10px;
     font-family: 'Montserrat', sans-serif;
     border-radius: 5px;
-    display: none;
+    display: block;
     cursor: pointer;
+    opacity: 0;
 }
 .form .tabs .tab:hover{
     outline: 1px solid white;
 }
 .form .tabs .tab.show{
-    display: block;
+    opacity: 1;
 }
 .form .inputs{
     padding: 1vw 0;
@@ -56,7 +57,7 @@
     width: 95%;
     background-color: transparent;
     border: none;
-    font-size: 1.2vw;
+    font-size: 18px;
     padding: 1vw 0;
     font-family: 'Montserrat', sans-serif;
 }
@@ -65,7 +66,7 @@
     width: 95%;
     background-color: transparent;
     border: none;
-    font-size: 1.2vw;
+    font-size: 18px;
     padding: 1vw 0;
     max-height: 150px;
     font-family: 'Montserrat', sans-serif;
@@ -107,7 +108,7 @@
     padding: 2vw 5vw;
 }
 .social h2{
-    font-size: 2.1vw;
+    font-size: 25px;
     font-family: 'Montserrat', sans-serif;
     padding: 1vw 1vw 1vw 0;
 }
@@ -121,7 +122,7 @@
     font-family: 'Montserrat', sans-serif;
     position: relative;
     font-weight: 700;
-    font-size: 1.2vw;
+    font-size: 16px;
     border-radius: 5px;
     overflow: hidden;
     box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.58);
@@ -138,7 +139,7 @@
     z-index: 1;
 }
 .social .socials a i{
-    font-size: 1.5vw;
+    font-size: 18px;
 }
 .social .socials a.twitter{
     background-color: #1DA1F2;
@@ -157,4 +158,73 @@
 }
 .social .socials a.github::after{
     background-color: #141111;
+}
+
+@media screen and (max-width: 1100px) {
+    .title.container,
+    .form.container,
+    .social.container{
+        width: 75%;
+    }
+}
+@media screen and (max-width: 850px){
+    .title.container,
+    .form.container,
+    .social.container{
+        width: 85%;
+    }
+}
+@media screen and (max-width: 800px){
+    .title .widget h1{
+        font-size: 30px;
+    }
+    .title .widget p{
+        line-height: 1.5;
+        font-size: 14px;
+    }
+    .form .inputs .widget input,
+    .form .inputs .widget textarea{
+        font-size: 16px;
+    }
+    .social h2{
+        font-size: 22px;
+    }
+    .social .socials a{
+        font-size: 14px;
+    }
+    .social .socials a i{
+        font-size: 16px;
+    }
+        
+}
+@media screen and (max-width: 500px){
+    .title.container{ 
+        padding-top: 1vw;
+    }
+    .title.container,
+    .form.container,
+    .social.container{
+        width: 95%;
+    }
+    .title .widget h1{
+        font-size: 27px;
+    }
+    .title .widget p{
+        font-size: 12px;
+    }
+    .form .inputs .widget input,
+    .form .inputs .widget textarea{
+        font-size: 14px;
+    }
+    .social h2{
+        font-size: 19px;
+    }
+    .social .socials a{
+        font-size: 12px;
+    }
+    .social .socials a i{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 320px){
 }
