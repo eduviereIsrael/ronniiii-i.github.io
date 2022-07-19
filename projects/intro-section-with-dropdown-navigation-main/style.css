@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+:root{
+    --white: hsl(0, 0%, 98%);
+    --gray: hsl(0, 0%, 41%);
+    --black: hsl(0, 0%, 8%);
+    --sans: 'Epilogue', sans-serif;
+    font-size: 18px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    /* transition: all 0.3s; */
+    font-family: var(--sans);
+}
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+body{
+    background-color: hsl(0, 0%, 98%);
+}
+li, a, span{
+    display: inline-block;
+    cursor: pointer;
+}
+h1{
+    font-size: 4rem;
+}
+header,
+nav,
+section{
+    display: flex;
+    align-items: center;
+}
+header{
+    justify-content: space-between;
+    padding: 16px 24px;
+}
+nav{
+    gap: 50px;
+}
+nav ol li{
+    color: var(--gray);
+    padding: 10px;
+    position: relative;
+}
+nav ol li:hover{
+    color: var(--black);
+}
+nav ol li:nth-child(1) a,
+nav ol li:nth-child(2) a{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ol li:nth-child(1):hover ul,
+nav ol li:nth-child(2):hover ul{
+    display: block;
+}
+nav ol li:nth-child(1) img,
+nav ol li:nth-child(2) img{
+    padding: 2px;
+}
+nav ol li:nth-child(1):hover img,
+nav ol li:nth-child(2):hover img{
+    content: url("images/icon-arrow-up.svg")
+}
+nav ul{
+    display: none;
+    position: absolute;
+    margin: 20px 20px 20px -40px;
+    padding: 2vw;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 5px 30px 0px hsl(0, 0%, 69%);
+    width: max-content;
+}
+nav ul li{
+    display: list-item;
+    list-style-position: inside;
+}
+nav ul li:nth-child(1){
+    list-style-image: url(images/icon-todo.svg);
+}
+nav ul li:nth-child(2){
+    list-style-image: url(images/icon-calendar.svg);
+}
+nav ul li:nth-child(3){
+    list-style-image: url(images/icon-reminders.svg);
+}
+nav ul li:nth-child(4){
+    list-style-image: url(images/icon-planning.svg);
+}
+nav ol li:nth-child(2) ul li{
+    list-style: none;
+}
+header .buttons a{
+    padding: 12px 24px;
+    color: var(--gray);
+}
+header .buttons a:hover{
+    color: var(--black);
+}
+header .buttons a:nth-child(2){
+    border: 2px solid var(--gray);
+    border-radius: 10px;
+}
+header .buttons a:nth-child(2):hover{
+    border-color: var(--black);
+}
+section{
+    width: 100%;
+    justify-content: center;
+    padding: 5vw;
+}
+section div{
+    width: 50%;
+}
+section .image{
+    width: 30%
+}
+section .image img{
+    width: 100%;
+}

@@ -2,38 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    footer { font-size: 11px; text-align: center; }
+    footer a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
 
-  Features
-  Company
-  Careers
-  About
-
-  Login
-  Register
-
-  Make remote work
-
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
-
-  Learn more
-  
-  <div class="attribution">
+  <header>
+    <nav>
+      <a href=""><img src="images/logo.svg" alt="Snap"></a>
+      <ol>
+        <li>
+          <a>Features <span><img src="images/icon-arrow-down.svg" alt=""></span></a>
+          <ul class="features">
+            <li>Todo List</li>
+            <li>Calender</li>
+            <li>Reminders</li>
+            <li>Planning</li>
+          </ul>
+        </li>
+        <li>
+          <a>Company <span><img src="images/icon-arrow-down.svg" alt=""></span></a>
+          <ul class="company">
+            <li>History</li>
+            <li>Our Team</li>
+            <li>Blog</li>
+          </ul>
+        </li>
+        <li><a>Careers</a></li>
+        <li><a>About</a></li>
+      </ol>
+    </nav>
+    <div class="buttons">
+      <a>Login</a>
+      <a>Register</a>
+    </div>
+  </header>
+  <section>
+    <div class="text">
+      <h1>Make remote work</h1>
+      <p>
+        Get your team in sync, no matter your location. Streamline processes, 
+        create team rituals, and watch productivity soar.
+      </p>
+      <a>Learn More</a>
+      <div class="client">
+        <img src="images/client-databiz.svg" alt="">
+        <img src="images/client-audiophile.svg" alt="">
+        <img src="images/client-meet.svg" alt="">
+        <img src="images/client-maker.svg" alt="">
+      </div>
+    </div>
+    <div class="image">
+      <img src="images/image-hero-desktop.png" alt="Hero Image">
+    </div>
+  </section>
+  <footer>
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Roni</a>.
-  </div>
+  </footer>
 </body>
 </html>
