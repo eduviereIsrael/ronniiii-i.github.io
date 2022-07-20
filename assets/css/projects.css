@@ -44,6 +44,9 @@
 .project .project_card.card6{
     background-image: url('../thumbs/desktop/homesmart.png');
 }
+.project .project_card.card7{
+    background-image: url('../thumbs/desktop/introsec.png');
+}
 .project .project_card .card-content{
     height: 200px;
     width: 100%;
@@ -108,6 +111,9 @@
     .project .project_card.card6{
         background-image: url('../thumbs/tab/homesmart.png');
     }
+    .project .project_card.card7{
+        background-image: url('../thumbs/tab/introsec.png');
+    }
 }
 @media screen and (max-width: 500px){
     .title.container{ 
@@ -134,6 +140,9 @@
     }
     .project .project_card.card6{
         background-image: url('../thumbs/mobile/homesmart.png');
+    }
+    .project .project_card.card7{
+        background-image: url('../thumbs/mobile/introsec.png');
     }
 }
 @media screen and (max-width: 320px){
