@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
   <style>
     footer { font-size: 11px; text-align: center; }
@@ -45,11 +46,11 @@
     <img src="images/icon-menu.svg" alt="burger" class="burger">
   </header>
   <nav class="responsive">
-    <img src="images/icon-close-menu.svg" alt="">
+    <img src="images/icon-close-menu.svg" id="close">
     <ol>
       <li>
-        <a>Features <span><img src="images/icon-arrow-down.svg" alt=""></span></a>
-        <ul class="features">
+        <a class="collName">Features <span><img src="images/icon-arrow-down.svg"></span></a>
+        <ul class="dropdown">
           <li>Todo List</li>
           <li>Calender</li>
           <li>Reminders</li>
@@ -57,8 +58,8 @@
         </ul>
       </li>
       <li>
-        <a>Company <span><img src="images/icon-arrow-down.svg" alt=""></span></a>
-        <ul class="company">
+        <a class="collName">Company <span><img src="images/icon-arrow-down.svg" alt=""></span></a>
+        <ul class="dropdown">
           <li>History</li>
           <li>Our Team</li>
           <li>Blog</li>
