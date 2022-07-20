@@ -21,6 +21,5 @@ for (let i = 0; i < collTitle.length; i++) {
         }
         dropdown[i].classList.toggle('show');
         arrowIcon[i].classList.toggle('change');
-        console.log('hi');
     })
 }
