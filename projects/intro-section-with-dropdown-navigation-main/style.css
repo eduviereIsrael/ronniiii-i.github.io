@@ -95,18 +95,18 @@ nav ul li:nth-child(4){
 nav ol li:nth-child(2) ul li{
     list-style: none;
 }
-header .buttons a{
+.buttons a{
     padding: 12px 24px;
     color: var(--gray);
 }
-header .buttons a:hover{
+.buttons a:hover{
     color: var(--black);
 }
-header .buttons a:nth-child(2){
+.buttons a:nth-child(2){
     border: 2px solid var(--gray);
     border-radius: 10px;
 }
-header .buttons a:nth-child(2):hover{
+.buttons a:nth-child(2):hover{
     border-color: var(--black);
 }
 section{
@@ -117,9 +117,67 @@ section{
 section div{
     width: 50%;
 }
+section .text h1{
+    padding: 20px 10px;
+}
+section .text p{
+    padding: 20px 10px;
+    color: var(--gray);
+}
+section .text a{
+    margin: 20px 10px;
+    padding: 12px 24px;
+    color: var(--white);
+    background-color: var(--black);
+    border: 1px solid var(--black);
+    border-radius: 10px;
+}
+section .text a:hover{
+    background-color: var(--white);
+    color: var(--black);
+}
+section .text div{
+    padding: 20px 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section .text div img{
+    width: 20%;
+}
 section .image{
-    width: 30%
+    width: 40%;
+    text-align: center;
 }
 section .image img{
-    width: 100%;
+    width: 75%;
+}
+@media screen and (max-width: 1000px){
+    h1{
+        font-size: 3rem;
+    }
+}
+@media screen and (max-width: 840px){
+    h1{
+        font-size: 2.5rem;
+    }
+    nav{
+        display: block;
+    }
+    nav img[alt="Snap"]{
+        padding: 10px;
+    }
+    header .buttons{
+        align-self: flex-end;
+    }
+    section .image img{
+        width: 85%;
+    }
+}
+@media screen and (max-width: 750px){
+    header nav ol,
+    header .buttons{
+        display: none
+    }
 }
