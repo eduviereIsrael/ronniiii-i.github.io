@@ -14,12 +14,12 @@
 </head>
 <body>
 
-  <header>
+  <header role="banner">
     <nav>
       <a href=""><img src="images/logo.svg" alt="Snap"></a>
       <ol>
         <li>
-          <a>Features <span><img src="images/icon-arrow-down.svg" alt=""></span></a>
+          <a>Features <span><img src="images/icon-arrow-down.svg" alt="arrow down"></span></a>
           <ul class="features">
             <li>Todo List</li>
             <li>Calender</li>
@@ -28,7 +28,7 @@
           </ul>
         </li>
         <li>
-          <a>Company <span><img src="images/icon-arrow-down.svg" alt=""></span></a>
+          <a>Company <span><img src="images/icon-arrow-down.svg" alt="arrow up"></span></a>
           <ul class="company">
             <li>History</li>
             <li>Our Team</li>
@@ -45,11 +45,11 @@
     </div>
     <img src="images/icon-menu.svg" alt="burger" class="burger">
   </header>
-  <nav class="responsive">
-    <img src="images/icon-close-menu.svg" id="close">
+  <nav class="responsive" role="navigation">
+    <img src="images/icon-close-menu.svg" id="close" alt="close">
     <ol>
       <li>
-        <a class="collName">Features <span><img src="images/icon-arrow-down.svg"></span></a>
+        <a class="collName">Features <span><img src="images/icon-arrow-down.svg" alt="arrow down"></span></a>
         <ul class="dropdown">
           <li>Todo List</li>
           <li>Calender</li>
@@ -58,7 +58,7 @@
         </ul>
       </li>
       <li>
-        <a class="collName">Company <span><img src="images/icon-arrow-down.svg" alt=""></span></a>
+        <a class="collName">Company <span><img src="images/icon-arrow-down.svg" alt="arrow up"></span></a>
         <ul class="dropdown">
           <li>History</li>
           <li>Our Team</li>
@@ -73,7 +73,7 @@
       <a>Register</a>
     </div>
   </nav>
-  <section>
+  <main role="main">
     <div class="text">
       <h1>Make remote work</h1>
       <p>
@@ -91,8 +91,8 @@
     <div class="image">
       <img src="images/image-hero-desktop.png" alt="Hero Image">
     </div>
-  </section>
-  <footer>
+  </main>
+  <footer role="contentinfo">
     Challenge by <a href="https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Roni</a>.
   </footer>
