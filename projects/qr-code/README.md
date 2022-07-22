@@ -36,5 +36,5 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ## Author
 
-- Frontend Mentor - [@rontendmentor.io/profile/ronniiii-i](https://www.frontendmentor.io/profile/ronniiii-i)
-- Twitter - [@rontendmentor.io/profile/ronniiii_i](https://www.twitter.com/ronniiii_i)
+- Frontend Mentor - [@ronniiii-i](https://www.frontendmentor.io/profile/ronniiii-i)
+- Twitter - [@ronniiii_i](https://www.twitter.com/ronniiii_i)
