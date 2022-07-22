@@ -47,6 +47,9 @@
 .project .project_card.card7{
     background-image: url('../thumbs/desktop/introsec.png');
 }
+.project .project_card.card8{
+    background-image: url('../thumbs/desktop/qr.png');
+}
 .project .project_card .card-content{
     height: 200px;
     width: 100%;
@@ -115,6 +118,9 @@
     .project .project_card.card7{
         background-image: url('../thumbs/tab/introsec.png');
     }
+    .project .project_card.card8{
+        background-image: url('../thumbs/tab/qr.png');
+    }
 }
 @media screen and (max-width: 500px){
     .title.container{ 
@@ -144,6 +150,9 @@
     }
     .project .project_card.card7{
         background-image: url('../thumbs/mobile/introsec.png');
+    }
+    .project .project_card.card8{
+        background-image: url('../thumbs/mobile/qr.png');
     }
 }
 @media screen and (max-width: 320px){
