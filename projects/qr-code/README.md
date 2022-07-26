@@ -15,8 +15,10 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 ## Overview
 
 ### Screenshot
+
 #### Desktop
   <img src="../../assets/thumbs/desktop/qr.png" style=" width: 500px;">
+  
 #### Mobile
   <img src="../../assets/thumbs/mobile/qr.png" style=" width: 300px;">
 
