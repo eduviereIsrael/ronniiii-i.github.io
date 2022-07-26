@@ -1,0 +1,32 @@
+:root{
+    /* vd -> Very Drak */
+    --vdblue: hsl(235, 21%, 11%);
+    --vdDesaturatedblue: hsl(235, 24%, 19%);
+    --lightgrayblue: hsl(234, 39%, 85%);
+    --lightgrayblueh: hsl(236, 33%, 92%);
+    --darkgrayblue: hsl(234, 11%, 52%);
+    --vdGrayishblueh: hsl(233, 14%, 35%);
+    --vdGrayishblue: hsl(237, 14%, 26%);
+}
+body {
+    background: url(images/bg-desktop-dark.jpg) no-repeat var(--vdblue);
+    background-size: contain;
+}
+li{
+    color: var(--lightgrayblue);
+}
+a, p, span{
+    color: var(--darkgrayblue);
+}
+header img{
+    content: url("images/icon-sun.svg");
+}
+main #new{
+    background-color: var(--vdDesaturatedblue);
+}
+input[type="checkbox"]{
+    border: 1px solid var(--vdGrayishblue);
+}
+main .list{
+    background-color: var(--vdDesaturatedblue);
+}

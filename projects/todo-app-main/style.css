@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+:root{
+    --blue: hsl(220, 98%, 61%);
+    --checkbg: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+    --font: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: var(--font);
+    /* font-weight: 700; */
+}
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+header, main, footer{
+    width: 40%;
+    padding: 10px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1{
+    color: white;
+    letter-spacing: 12px;
+    font-size: 2.5rem;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+main #new, li{
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+input{
+    background-color: transparent;
+    width: calc(100% - 70px);
+    border: none;
+    font-size: 1rem;
+}
+input[type="checkbox"]{
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+}
+main .list .action{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}

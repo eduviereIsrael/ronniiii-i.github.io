@@ -1,0 +1,7 @@
+:root{
+    --lightgray: hsl(0, 0%, 98%);
+   --vlightgrayblue: hsl(236, 33%, 92%);
+    --lightgrayblue: hsl(233, 11%, 84%);
+    --darkgrayblue: hsl(236, 9%, 61%);
+    --vdarkgrayblue: hsl(235, 19%, 35%);
+}
