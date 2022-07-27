@@ -28,8 +28,11 @@ body {
     justify-content: center;
     font-family: var(--font);
 }
+main{
+    padding: 20px;
+}
 main .card{
-    width: 600px;
+    max-width: 600px;
     margin: auto;
     background-color: var(--darkgrayblue);
     padding: 15px;
