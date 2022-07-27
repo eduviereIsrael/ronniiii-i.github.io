@@ -50,7 +50,7 @@ main .card h2{
     color: var(--green);
 }
 main .card q{
-    font-size: 28px;
+    font-size: 1.8rem;
     color: var(--cyan);
     text-align: center;
 }
@@ -85,4 +85,17 @@ footer {
 }
 footer a { 
     color: hsl(228, 45%, 44%); 
+}
+@media screen and (max-width: 800px){
+    main .card q{
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 500px){
+    main .card h2{
+        font-size: 1.1rem;
+    }
+    main .card q{
+        font-size: 1.3rem;
+    }
 }
