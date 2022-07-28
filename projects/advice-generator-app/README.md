@@ -33,7 +33,7 @@ Users should be able to:
 
 #### Mobile
 
-<img src="images/advice.png" style="width: 500px;">
+<img src="images/advice.png" style="width: 300px;">
 
 ### Links
 
@@ -58,7 +58,7 @@ I learnt how to consume APIs using the fetch() method in javascript
 function generateAdvice() {
     fetch(adviceUrl)
     .then(response => response.json())
-    .then((data)=> display(data))// output will be the required data
+    .then((data)=> display(data))//function that will sort out the data object
     .catch( (error) => console.log(error))
 }
 ```
