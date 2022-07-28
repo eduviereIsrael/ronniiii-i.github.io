@@ -50,6 +50,9 @@
 .project .project_card.card8{
     background-image: url('../thumbs/desktop/qr.png');
 }
+.project .project_card.card9{
+    background-image: url('../thumbs/desktop/advice.png');
+}
 .project .project_card .card-content{
     height: 200px;
     width: 100%;
@@ -121,6 +124,9 @@
     .project .project_card.card8{
         background-image: url('../thumbs/tab/qr.png');
     }
+    .project .project_card.card9{
+        background-image: url('../thumbs/tab/advice.png');
+    }
 }
 @media screen and (max-width: 500px){
     .title.container{ 
@@ -153,6 +159,9 @@
     }
     .project .project_card.card8{
         background-image: url('../thumbs/mobile/qr.png');
+    }
+    .project .project_card.card9{
+        background-image: url('../thumbs/mobile/advice.png');
     }
 }
 @media screen and (max-width: 320px){
