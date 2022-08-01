@@ -8,14 +8,23 @@
     width: 50%;
     text-align: center;
 }
+.skills img{
+    width: 50px;
+}
+.skills img:nth-last-child(1){
+    width: 45px;
+}
+.widget:nth-last-child(1){
+    text-align: center;
+}
+.socials{
+    font-size: 150%;
+}
 .fa-twitter:hover{
     color: #1DA1F2;
 }
 .fa-linkedin-in:hover{
     color: #0e76a8;
-}
-.fa-github:hover{
-    color: #171515;
 }
 .fa-instagram:hover{
     color: #d6249f;
