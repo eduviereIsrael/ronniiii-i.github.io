@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
 :root{
     --blue: hsl(220, 98%, 61%);
-    --checkbg: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+    --checkbg: linear-gradient(rgba(87, 221, 255, .7), rgba(192, 88, 243, .7));
     --font: 'Josefin Sans', sans-serif;
     font-size: 18px;
 }
@@ -23,6 +23,29 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: white;
+  background-color: transparent !important;
+  -webkit-box-shadow: 0 0 0px 1000px #00000000 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+input:focus, input:active, input:visited, textarea:focus, textarea:active, textarea:visited{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+a, em, span{
+    display: inline-block;
 }
 a{
     text-decoration: none;
@@ -54,17 +77,35 @@ main #new, li{
     gap: 20px;
     padding: 20px;
 }
+main #new input[name="new"]{
+    padding: 10px;
+    height: inherit;
+}
 input{
     background-color: transparent;
     width: calc(100% - 70px);
     border: none;
     font-size: 1rem;
 }
-input[type="checkbox"]{
-    appearance: none;
+li .check{
+    position: relative;
+}
+main #new .check input,
+li .check input{
+    display: none;
+}
+main #new .check label,
+li .check label{
     width: 30px;
     height: 30px;
     border-radius: 30px;
+    display: inline-block;
+}
+main #new .check input:checked ~ label,
+li .check input:checked ~ label{
+    background-image: var(--checkbg),url(images/icon-check.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 main .list .action{
     display: flex;

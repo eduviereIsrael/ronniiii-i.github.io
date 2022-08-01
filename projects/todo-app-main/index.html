@@ -20,15 +20,15 @@
   </header>
   <main role="main">
     <div id="new">
-      <input type="checkbox" name="addnew">
+      <div class="check">
+        <input type="checkbox" name="addnew" id="addnew">
+        <label for="addnew"></label>
+      </div>
       <input type="text" name="new" placeholder="Create a new todo...">
     </div>
     <div class="list">
       <ul id="tasks">
-        <li>
-          <input type="checkbox" name="listItem" id="">
-          <label>Item</label>
-        </li>
+        <em style="text-align: center; width: 100%; padding: 20px;">add a todo item</em>
       </ul>
       <div class="action">
         <p>
@@ -36,11 +36,11 @@
           items left
         </p>
         <div class="views">
-          <a href="">All</a>
-          <a href="">Active</a>
-          <a href="">Completed</a>
+          <a href="javascript:void(0);" onclick="displayAll()">All</a>
+          <a href="javascript:void(0);" onclick="displayActive()">Active</a>
+          <a href="javascript:void(0);" onclick="displayCompleted()">Completed</a>
         </div>
-        <a href="" id="clearList">Clear Completed</a>
+        <a href="" onclick="clearComplete()">Clear Completed</a>
       </div>
     </div>
     <p>Drag and drop to reorder list</p>

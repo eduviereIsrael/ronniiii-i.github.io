@@ -15,7 +15,7 @@ body {
 li{
     color: var(--lightgrayblue);
 }
-a, p, span{
+a, em, p, span, input{
     color: var(--darkgrayblue);
 }
 header img{
@@ -24,7 +24,8 @@ header img{
 main #new{
     background-color: var(--vdDesaturatedblue);
 }
-input[type="checkbox"]{
+main #new .check label,
+li .check label{
     border: 1px solid var(--vdGrayishblue);
 }
 main .list{
