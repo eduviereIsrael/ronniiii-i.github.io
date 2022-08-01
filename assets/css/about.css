@@ -4,6 +4,7 @@
     padding: 2vw;
 }
 .col{
+    font-family: 'Montserrat', sans-serif;
     width: 50%;
     text-align: center;
 }
@@ -21,4 +22,13 @@
 }
 .fa-envelope:hover{
     color: #EA4335;
+}
+@media screen and (max-width: 500px){
+    .content.container{
+        flex-direction: column;
+    }
+    .col{
+        width: 100%;
+        text-align: left;
+    }
 }
