@@ -52,7 +52,8 @@ a{
     display: inline-block;
 }
 header, main, footer{
-    width: 40%;
+    width: 100%;
+    max-width: 30rem;
     padding: 10px;
 }
 header{
@@ -76,6 +77,9 @@ main #new, li{
     align-items: center;
     gap: 20px;
     padding: 20px;
+}
+main .list{
+    border-radius: 5px;
 }
 main #new input[name="new"]{
     padding: 10px;
@@ -109,6 +113,7 @@ li .check input:checked ~ label{
 }
 main .list .action{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 2.3rem;
     padding: 20px;
 }

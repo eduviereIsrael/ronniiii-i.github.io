@@ -5,3 +5,27 @@
     --darkgrayblue: hsl(236, 9%, 61%);
     --vdarkgrayblue: hsl(235, 19%, 35%);
 }
+body {
+    background: url(images/bg-desktop-dark.jpg) no-repeat var(--lightgray);
+    background-size: contain;
+}
+header img{
+    content: url("images/icon-moon.svg");
+}
+li{
+    color: var(--vdarkgrayblue);
+}
+a, em, p, span, input{
+    color: var(--vdarkgrayblue);
+}
+main #new{
+    background-color: var(--lightgray);
+}
+main #new .check label,
+li .check label{
+    border: 1px solid var(--lightgrayblue);
+}
+main .list{
+    background-color: var(--lightgray);
+    box-shadow: 0px 0px 10px 0px var(--lightgrayblue);
+}

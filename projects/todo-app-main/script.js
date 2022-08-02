@@ -1,11 +1,25 @@
+var toggleSwitch = document.querySelector('img[alt="theme"]');
 const addnew = document.querySelector('[name="addnew"]')
 const add = document.querySelector('[name="new"]')
+const count = document.querySelector('#count')
 
 var all = [];
 active = [];
 var complete = [];
 
 var list = document.querySelector('#tasks');
+
+
+toggleSwitch.addEventListener('click', () => {
+    // // console.log(document.styleSheets.item(0).href.replace('style.css', 'dark.css'));
+    // document.styleSheets.item(0).href.replace('style.css', 'dark.css')
+    var theme = document.getElementsByTagName('link')[2];
+    if (theme.getAttribute('href') == 'light.css') {
+        theme.setAttribute('href', 'dark.css')
+    } else {
+        theme.setAttribute('href', 'light.css')
+    }
+})
 
 addnew.addEventListener('click', () => {
     if (addnew.checked == true) {
@@ -21,6 +35,8 @@ addnew.addEventListener('click', () => {
 list.addEventListener('click', () => {
     updateSub();
     console.log(active);
+    list.childElementCount()
+    count.innerHTML
 })
 function updateSub() {
     var listItem = document.querySelectorAll('[name="listItem"]');
