@@ -15,7 +15,7 @@ body {
 li{
     color: var(--lightgrayblue);
 }
-a, em, p, span, input{
+a, em,li.checked p,.action p, span, input{
     color: var(--darkgrayblue);
 }
 header img{

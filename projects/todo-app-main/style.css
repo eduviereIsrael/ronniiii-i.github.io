@@ -80,6 +80,20 @@ main #new, li{
 }
 main .list{
     border-radius: 5px;
+    min-height: 10rem;
+    max-height: 20rem;
+    /* height: 10rem; */
+    position: relative;
+    overflow-y: auto;
+}
+main .list ul{
+    /* position: absolute; */
+    /* top: 20px; */
+    width: 100%;
+    display: none;
+}
+main .list ul:nth-child(1){
+    display: block;
 }
 main #new input[name="new"]{
     padding: 10px;
@@ -90,6 +104,9 @@ input{
     width: calc(100% - 70px);
     border: none;
     font-size: 1rem;
+}
+li{
+    justify-content: flex-start;
 }
 li .check{
     position: relative;
@@ -106,12 +123,25 @@ li .check label{
     display: inline-block;
 }
 main #new .check input:checked ~ label,
-li .check input:checked ~ label{
+li.checked .check label{
     background-image: var(--checkbg),url(images/icon-check.svg);
     background-position: center center;
     background-repeat: no-repeat;
 }
-main .list .action{
+li p{
+    width: 85%;
+}
+li.checked p{
+    text-decoration: line-through;
+}
+li i::before{
+    /* justify-self: flex-end; */
+    display: none;
+}
+li:hover i::before{
+    display: flex;
+}
+main .action{
     display: flex;
     justify-content: center;
     gap: 2.3rem;

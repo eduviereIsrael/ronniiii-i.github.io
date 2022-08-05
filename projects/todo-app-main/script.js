@@ -1,3 +1,4 @@
+var myNodelist = document.getElementsByTagName("LI");
 var toggleSwitch = document.querySelector('img[alt="theme"]');
 const addnew = document.querySelector('[name="addnew"]')
 const add = document.querySelector('[name="new"]')
@@ -7,12 +8,11 @@ var all = [];
 active = [];
 var complete = [];
 
-var list = document.querySelector('#tasks');
+var lists = document.querySelectorAll('ul');
+var list = document.querySelector('.list');
 
 
 toggleSwitch.addEventListener('click', () => {
-    // // console.log(document.styleSheets.item(0).href.replace('style.css', 'dark.css'));
-    // document.styleSheets.item(0).href.replace('style.css', 'dark.css')
     var theme = document.getElementsByTagName('link')[2];
     if (theme.getAttribute('href') == 'light.css') {
         theme.setAttribute('href', 'dark.css')
@@ -20,7 +20,19 @@ toggleSwitch.addEventListener('click', () => {
         theme.setAttribute('href', 'light.css')
     }
 })
-
+add.addEventListener("keypress", function(event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    addnew.checked = true
+    all.push(add.value);
+    window.setTimeout(() => {
+        addnew.checked = false;
+        add.value = '';
+    },500);
+    console.log(all);
+    displayAll();
+    }
+})
 addnew.addEventListener('click', () => {
     if (addnew.checked == true) {
         all.push(add.value);
@@ -32,23 +44,18 @@ addnew.addEventListener('click', () => {
         displayAll();
     }
 })
-list.addEventListener('click', () => {
-    updateSub();
-    console.log(active);
-    list.childElementCount()
-    count.innerHTML
-})
-function updateSub() {
-    var listItem = document.querySelectorAll('[name="listItem"]');
-    var itemDesc = document.querySelectorAll('.itemdesc');
-    active = [...all];
-    for (let i = 0; i < all.length; i++) {
-        if (listItem[i].checked == true) {
-            complete.push(itemDesc[i].innerHTML);
-            complete.push()
-            active.splice(complete.push())
-        }
+list.addEventListener('click', (ev) => {
+    if (ev.target.tagName === 'LI' || ev.target.tagName === 'P' || ev.target.tagName === 'LABEL') {
+      ev.target.classList.toggle('checked');
+      console.log('li');
     }
+    console.log(ev.target.tagName);
+    updateSub();
+    // console.log(active);
+    // list.childElementCount();
+    // count.innerHTML
+}, false)
+function updateSub() {
 }
 
 function displayAll() {
@@ -62,10 +69,14 @@ function displayAll() {
                 <label for="item${i}"></label>
             </div>
             <p class="itemdesc">${all[i]}</p>
+            <i class="fas fa-times"></i>
         </li>
         `
     }
-    list.innerHTML = htmlCode;
+    lists[0].innerHTML = htmlCode;
+    lists[0].style.display = 'block';
+    lists[1].style.display = 'none';
+    lists[2].style.display = 'none';
 }
 function displayActive() {
     var htmlCode = "";
@@ -81,9 +92,15 @@ function displayActive() {
         </li>
         `
     }
-    list.innerHTML = htmlCode;
+    lists[1].innerHTML = htmlCode;
+    lists[1].style.display = 'block';
+    lists[0].style.display = 'none';
+    lists[2].style.display = 'none';
 }
 function displayCompleted() {
+    const completed =document.querySelectorAll('li.checked p');
+    console.log(...completed);
+    complete.push(...completed);
     var htmlCode = "";
 
     for (let i = 0; i < complete.length; i++) {
@@ -97,10 +114,38 @@ function displayCompleted() {
         </li>
         `
     }
-    list.innerHTML = htmlCode;
+    lists[2].innerHTML = htmlCode;
+    lists[2].style.display = 'block';
+    lists[1].style.display = 'none';
+    lists[0].style.display = 'none';
 }
 function clearComplete() {
     var htmlCode = `<em style="text-align: center; width: 100%; padding: 20px;">add a todo item</em>`;
     complete = [];
     list.innerHTML = htmlCode;
+}
+function del(i) {
+    if (lists[0].style.display == 'block') {
+        all.splice(i,1);
+        displayAll();
+        // var alertt = document.getElementById('alertt');
+        // alertt.innerHTML="Course Deleted"
+        // alertt.classList.add("alerting");
+        // window.setTimeout(removeAlert,3000);
+    } else if (lists[1].style.display == 'block') {
+        active.splice(i,1);
+        displayActive();
+        // var alertt = document.getElementById('alertt');
+        // alertt.innerHTML="Course Deleted"
+        // alertt.classList.add("alerting");
+        // window.setTimeout(removeAlert,3000);
+    } else 
+    if (lists[2].style.display == 'block') {
+        complete.splice(i,1);
+        displayCompleted();
+        // var alertt = document.getElementById('alertt');
+        // alertt.innerHTML="Course Deleted"
+        // alertt.classList.add("alerting");
+        // window.setTimeout(removeAlert,3000);
+    }
 }

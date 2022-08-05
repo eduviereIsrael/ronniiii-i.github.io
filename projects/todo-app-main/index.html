@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="dark.css">
   <script defer src="script.js"></script>
+  <script src="https://kit.fontawesome.com/992b6cd049.js" crossorigin="anonymous"></script>
   <title>Todo app</title>
   <style>
     footer { font-size: 11px; text-align: center; }
@@ -27,21 +28,51 @@
       <input type="text" name="new" placeholder="Create a new todo...">
     </div>
     <div class="list">
-      <ul id="tasks">
+      <ul id="task1">
         <em style="text-align: center; width: 100%; padding: 20px;">add a todo item</em>
+        <li class="checked">
+            <div class="check">
+                <input type="checkbox" name="listItem" id="item${i}">
+                <label for="item${i}"></label>
+            </div>
+            <p class="itemdesc">${all[i]}</p>
+            <i class="fas fa-times" onclick="del()"></i> 
+        </li>
       </ul>
-      <div class="action">
-        <p>
-          <span id="count"></span>
-          items left
-        </p>
-        <div class="views">
-          <a href="javascript:void(0);" onclick="displayAll()">All</a>
-          <a href="javascript:void(0);" onclick="displayActive()">Active</a>
-          <a href="javascript:void(0);" onclick="displayCompleted()">Completed</a>
-        </div>
-        <a href="" onclick="clearComplete()">Clear Completed</a>
+      <ul id="task2">
+        <em style="text-align: center; width: 100%; padding: 20px;">add a todo item</em>
+        <li class="checked">
+            <div class="check">
+                <input type="checkbox" name="listItem" id="item${i}">
+                <label for="item${i}"></label>
+            </div>
+            <p class="itemdesc">${all[i]}</p>
+            <i class="fas fa-times" onclick="del()"></i> 
+        </li>
+      </ul>
+      <ul id="task3">
+        <em style="text-align: center; width: 100%; padding: 20px;">add a todo item</em>
+        <li class="checked">
+            <div class="check">
+                <input type="checkbox" name="listItem" id="item${i}">
+                <label for="item${i}"></label>
+            </div>
+            <p class="itemdesc">${all[i]}</p>
+            <i class="fas fa-times" onclick="del()"></i> 
+        </li>
+      </ul>
+    </div>
+    <div class="action">
+      <p>
+        <span id="count"></span>
+        items left
+      </p>
+      <div class="views">
+        <a href="javascript:void(0);" onclick="displayAll()">All</a>
+        <a href="javascript:void(0);" onclick="displayActive()">Active</a>
+        <a href="javascript:void(0);" onclick="displayCompleted()">Completed</a>
       </div>
+      <a href="" onclick="clearComplete()">Clear Completed</a>
     </div>
     <p>Drag and drop to reorder list</p>
   </main>
