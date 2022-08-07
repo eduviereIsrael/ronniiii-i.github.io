@@ -12,10 +12,13 @@ body {
     background: url(images/bg-desktop-dark.jpg) no-repeat var(--vdblue);
     background-size: contain;
 }
-li, main .action a:hover{
+li{
+    border-bottom: 1px solid var(--darkgrayblue);
+}
+li, li p, main .action a:hover{
     color: var(--lightgrayblue);
 }
-a, em,li.checked p,.action p, span, input{
+a, em,li.checked p, p, span, input{
     color: var(--darkgrayblue);
 }
 header img{
@@ -32,7 +35,7 @@ main #new .check label:hover,
 li .check label:hover{
     border: 1px solid var(--vdGrayishblue);
 }
-main .list, main .action{
+main section{
     background-color: var(--vdDesaturatedblue);
 }
 @media screen and (max-width: 500px) {

@@ -73,15 +73,16 @@ main{
     align-items: center;
 }
 main #new, li{
-    border-radius: 5px;
     display: flex;
     align-items: center;
     gap: 20px;
     padding: 20px;
     width: 100%;
 }
-main .list{
+main section, main #new{
     border-radius: 5px;
+}
+main .list{
     min-height: 2.5rem;
     max-height: 20rem;
     /* height: 10rem; */

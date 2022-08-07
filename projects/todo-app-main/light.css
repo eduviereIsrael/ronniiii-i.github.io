@@ -2,7 +2,7 @@
     --lightgray: hsl(0, 0%, 98%);
    --vlightgrayblue: hsl(236, 33%, 92%);
     --lightgrayblue: hsl(233, 11%, 84%);
-    --darkgrayblue: hsl(236, 9%, 61%);
+    --darkgrayblue: hsl(237, 31%, 13%);
     --vdarkgrayblue: hsl(235, 19%, 35%);
 }
 body {
@@ -19,14 +19,14 @@ a, em, p, span, input{
     color: var(--vdarkgrayblue);
 }
 main #new{
-    background-color: var(--lightgray);
+    background-color: white;
 }
 main #new .check label,
 li .check label{
     border: 1px solid var(--lightgrayblue);
 }
-main .list{
-    background-color: var(--lightgray);
+main section{
+    background-color: white;
     box-shadow: 0px 0px 10px 0px var(--lightgrayblue);
 }
 @media screen and (max-width: 500px) {

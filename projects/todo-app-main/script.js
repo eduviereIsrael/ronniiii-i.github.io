@@ -177,7 +177,9 @@ function sortList() {
     for (let i = 0; i < all.length; i++) {
         if (items[i].classList.contains('checked') == true) {
             all[i].checked = true
-        }        
+        }  else {
+            all[i].checked = false
+        }      
     }
 }
 function sortActive() {
