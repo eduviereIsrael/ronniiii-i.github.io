@@ -74,8 +74,8 @@ list.addEventListener('click', (ev) => {
     console.log(ev.target.tagName);
     updateSub();
     // console.log(active);
-    sortActive();
-    sortComplete();
+    // sortActive();
+    // sortComplete();
 }, false)
 function updateSub() {
 }
@@ -108,6 +108,8 @@ function displayAll() {
 
 }
 function displayActive() {
+    sortActive();
+    console.log(active);
     var htmlCode = "";
 
     if (active.length !== 0) {
@@ -165,30 +167,7 @@ function clearComplete() {
     complete = [];
     list.innerHTML = htmlCode;
 }
-function del(i) {
-    if (lists[0].style.display == 'block') {
-        all.splice(i,1);
-        displayAll();
-        // var alertt = document.getElementById('alertt');
-        // alertt.innerHTML="Course Deleted"
-        // alertt.classList.add("alerting");
-        // window.setTimeout(removeAlert,3000);
-    } else if (lists[1].style.display == 'block') {
-        active.splice(i,1);
-        displayActive();
-        // var alertt = document.getElementById('alertt');
-        // alertt.innerHTML="Course Deleted"
-        // alertt.classList.add("alerting");
-        // window.setTimeout(removeAlert,3000);
-    } else 
-    if (lists[2].style.display == 'block') {
-        complete.splice(i,1);
-        displayCompleted();
-        // var alertt = document.getElementById('alertt');
-        // alertt.innerHTML="Course Deleted"
-        // alertt.classList.add("alerting");
-        // window.setTimeout(removeAlert,3000);
-    }
+function del() {
 }
 function count() {
     countIt.innerHTML = active.length;
@@ -202,11 +181,11 @@ function sortList() {
     }
 }
 function sortActive() {
-    // all.forEach(el => {
-    //     if (el.checked == false) {
-    //         active.push(el)
-    //     }
-    // })
+    var fit
+    fit = all.filter(el => el.checked == false)
+    active = fit
+    console.log(fit);
+    count();
 }
 function sortComplete() {
     all.forEach(el => {

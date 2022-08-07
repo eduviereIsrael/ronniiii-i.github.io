@@ -146,7 +146,7 @@ li:hover i::before{
 main .action{
     display: flex;
     justify-content: center;
-    gap: 2.1rem;
+    gap: 2rem;
     padding: 20px;
 }
 .action a.view{
