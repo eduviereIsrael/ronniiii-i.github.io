@@ -12,7 +12,7 @@ body {
     background: url(images/bg-desktop-dark.jpg) no-repeat var(--vdblue);
     background-size: contain;
 }
-li{
+li, main .action a:hover{
     color: var(--lightgrayblue);
 }
 a, em,li.checked p,.action p, span, input{
@@ -28,6 +28,16 @@ main #new .check label,
 li .check label{
     border: 1px solid var(--vdGrayishblue);
 }
-main .list{
+main #new .check label:hover,
+li .check label:hover{
+    border: 1px solid var(--vdGrayishblue);
+}
+main .list, main .action{
     background-color: var(--vdDesaturatedblue);
+}
+@media screen and (max-width: 500px) {
+    body {
+        background: url(images/bg-mobile-dark.jpg) no-repeat var(--vdblue);
+        background-size: contain;
+    }
 }

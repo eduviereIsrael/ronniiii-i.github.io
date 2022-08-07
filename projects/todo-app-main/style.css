@@ -70,6 +70,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: 30px;
+    align-items: center;
 }
 main #new, li{
     border-radius: 5px;
@@ -77,10 +78,11 @@ main #new, li{
     align-items: center;
     gap: 20px;
     padding: 20px;
+    width: 100%;
 }
 main .list{
     border-radius: 5px;
-    min-height: 10rem;
+    min-height: 2.5rem;
     max-height: 20rem;
     /* height: 10rem; */
     position: relative;
@@ -144,6 +146,9 @@ li:hover i::before{
 main .action{
     display: flex;
     justify-content: center;
-    gap: 2.3rem;
+    gap: 2.1rem;
     padding: 20px;
+}
+.action a.view{
+    color: var(--blue);
 }
