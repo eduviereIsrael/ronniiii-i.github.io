@@ -35,7 +35,7 @@ add.addEventListener("keypress", function(event) {
     window.setTimeout(() => {
         addnew.checked = false;
         add.value = '';
-    },500);
+    },300);
     console.log(all);
     console.log(complete);
     displayAll();
@@ -55,7 +55,7 @@ addnew.addEventListener('click', () => {
         window.setTimeout(() => {
             addnew.checked = false;
             add.value = '';
-        },500);
+        },300);
         console.log(all);
         console.log(complete);
         displayAll();
@@ -109,7 +109,6 @@ function displayAll() {
 }
 function displayActive() {
     sortActive();
-    console.log(active);
     var htmlCode = "";
 
     if (active.length !== 0) {
@@ -163,9 +162,9 @@ function displayCompleted() {
 
 }
 function clearComplete() {
-    var htmlCode = `<em style="text-align: center; width: 100%; padding: 20px;">add a todo item</em>`;
+    var htmlCode = `<em style="text-align: center; width: 100%; padding: 20px;">complete a todo item</em>`;
     complete = [];
-    list.innerHTML = htmlCode;
+    lists[2].innerHTML = htmlCode;
 }
 function del() {
 }
@@ -195,6 +194,4 @@ function sortComplete() {
             complete.push(el)
         }
     })
-}
-function crosscheck() {
 }

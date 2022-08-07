@@ -79,6 +79,9 @@ main #new, li{
     padding: 20px;
     width: 100%;
 }
+main section{
+    width: 100%;
+}
 main section, main #new{
     border-radius: 5px;
 }
@@ -146,9 +149,10 @@ li:hover i::before{
 }
 main .action{
     display: flex;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: space-between;
+    /* gap: 2rem; */
     padding: 20px;
+    font-size: .8rem;
 }
 .action a.view{
     color: var(--blue);
