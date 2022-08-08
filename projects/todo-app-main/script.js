@@ -1,4 +1,3 @@
-var myNodelist = document.getElementsByTagName("LI");
 var toggleSwitch = document.querySelector('img[alt="theme"]');
 const addnew = document.querySelector('[name="addnew"]')
 const add = document.querySelector('[name="new"]')
@@ -36,10 +35,7 @@ add.addEventListener("keypress", function(event) {
         addnew.checked = false;
         add.value = '';
     },300);
-    console.log(all);
-    console.log(complete);
     displayAll();
-    // sortActive();
     count();
     }
 })
@@ -56,29 +52,40 @@ addnew.addEventListener('click', () => {
             addnew.checked = false;
             add.value = '';
         },300);
-        console.log(all);
-        console.log(complete);
         displayAll();
-        // sortActive();
         count();
     }
 })
 list.addEventListener('click', (ev) => {
-    if (ev.target.tagName === 'LI' || ev.target.tagName === 'P' || ev.target.tagName === 'LABEL') {
-      ev.target.classList.toggle('checked');
-      console.log('li');
-      sortList();
-      sortActive();
-      sortComplete();
+    if (ev.target.tagName === 'LABEL' || ev.target.tagName === 'P' || ev.target.tagName === 'LI') {
+        ev.target.classList.toggle('checked');
+        sortAllList();
+        if (lists[1].style.display == 'block') {
+              activeToComplete();
+        }
+        if (lists[2].style.display == 'block') {
+              completeToActive();
+        }
+        sortActive();
+        sortComplete();
     }
-    console.log(ev.target.tagName);
-    updateSub();
-    // console.log(active);
-    // sortActive();
-    // sortComplete();
-}, false)
-function updateSub() {
-}
+    if (all.length == 0) {
+        var htmlCode = `<em style="text-align: center; width: 100%; padding: 20px;">add a todo item</em>`;
+        lists[0].innerHTML = htmlCode;
+        
+    }
+    if (active.length == 0) {
+        var htmlCode = `<em style="text-align: center; width: 100%; padding: 20px;">add a todo item</em>`;
+        lists[1].innerHTML = htmlCode;
+        
+    }
+    if (complete.length == 0) {
+        var htmlCode = `<em style="text-align: center; width: 100%; padding: 20px;">complete a todo item</em>`;
+        lists[2].innerHTML = htmlCode;
+        
+    }
+    // console.log(ev.target.tagName);
+})
 views[0].classList.add('view')
 function displayAll() {
     var htmlCode = "";
@@ -86,13 +93,13 @@ function displayAll() {
     if (all.length !== 0) {
         for (let i = 0; i < all.length; i++) {
             htmlCode+= `
-            <li>
+            <li draggable="true">
                 <div class="check">
                     <input type="checkbox" name="listItem" id="item${i}">
                     <label for="item${i}"></label>
                 </div>
                 <p class="itemdesc">${all[i].val}</p>
-                <i class="fas fa-times"></i>
+                <span onclick="del(${i})">X</span>
             </li>
             `
         }
@@ -105,21 +112,23 @@ function displayAll() {
     views[1].classList.remove('view')
     views[2].classList.remove('view')
     count()
+    keepChecked();
 
 }
 function displayActive() {
-    sortActive();
+    // sortActive();
     var htmlCode = "";
 
     if (active.length !== 0) {
         for (let i = 0; i < active.length; i++) {
             htmlCode+= `
-            <li>
+            <li draggable="true">
                 <div class="check">
                     <input type="checkbox" name="listItem" id="item${i}">
                     <label for="item${i}"></label>
                 </div>
                 <p class="itemdesc">${active[i].val}</p>
+                <span onclick="del(${i})">X</span>
             </li>
             `
         }
@@ -141,12 +150,13 @@ function displayCompleted() {
     if (unique.length !== 0) {
         for (let i = 0; i < unique.length; i++) {
             htmlCode+= `
-            <li>
+            <li draggable="true" class="checked">
                 <div class="check">
                     <input type="checkbox" name="listItem" id="item${i}">
                     <label for="item${i}"></label>
                 </div>
                 <p class="itemdesc">${unique[i].val}</p>
+                <span onclick="del(${i})">X</span>
             </li>
             `
         }  
@@ -166,12 +176,37 @@ function clearComplete() {
     complete = [];
     lists[2].innerHTML = htmlCode;
 }
-function del() {
+function del(theIndex) {
+    let i = theIndex;
+    if (lists[0].style.display == 'block') {
+        all.splice(i,1);
+        displayAll();
+    }
+    if (lists[1].style.display == 'block') {
+        active.splice(i,1);
+        let removeFromAll = all.find(el => {
+            el == active.splice()
+        })
+        all.splice(removeFromAll,1);
+        displayActive();
+    }
+    if (lists[2].style.display == 'block') {
+        complete.splice(i,1);
+        let removeFromAll = all.find(el => {
+            el == complete.splice()
+        })
+        all.splice(removeFromAll,1);
+        displayCompleted();
+    }
+    sortActive();
+    sortComplete();
 }
 function count() {
+    // to keep count of active items
     countIt.innerHTML = active.length;
 }
-function sortList() {
+function sortAllList() {
+    // to sort the items into active and completed
     const items =document.querySelectorAll('li');
     for (let i = 0; i < all.length; i++) {
         if (items[i].classList.contains('checked') == true) {
@@ -181,17 +216,50 @@ function sortList() {
         }      
     }
 }
+function activeToComplete() {
+    const items = document.querySelectorAll('#task2 li')
+    for (let i = 0; i < active.length; i++) {
+        if (items[i].classList.contains('checked') == true) {
+            active[i].checked = true;
+            active.splice(i,1);
+            console.log(active.splice());
+        }  else {
+            active[i].checked = false
+        }  
+    }
+}
+function keepChecked() {
+    // to keep the completed items checked afetr changing views
+    const allItems = document.querySelectorAll('#task1 li');
+    for (let i = 0; i <all.length; i++) {
+        if (all[i].checked == true) {
+            allItems[i].classList.add('checked')
+        }
+    }
+}
 function sortActive() {
+    // to add active items to the active array
     var fit
     fit = all.filter(el => el.checked == false)
     active = fit
-    console.log(fit);
     count();
 }
 function sortComplete() {
-    all.forEach(el => {
-        if (el.checked == true) {
-            complete.push(el)
-        }
-    })
+    //to add completed items to the complete array
+    var com
+    com = all.filter(el => el.checked == true)
+    complete = com
+    // console.log('complete', complete);
+}
+function completeToActive() {
+    const items = document.querySelectorAll('#task3 li')
+    for (let i = 0; i < complete.length; i++) {
+        if (items[i].classList.contains('checked') == true) {
+            complete[i].checked = true;
+        }  else {
+            complete[i].checked = false
+            complete.splice(i,1);
+            console.log(complete.splice());
+        }  
+    }
 }

@@ -46,6 +46,7 @@ input:focus, input:active, input:visited, textarea:focus, textarea:active, texta
 }
 a, em, span{
     display: inline-block;
+    cursor: pointer;
 }
 a{
     text-decoration: none;
@@ -140,11 +141,11 @@ li p{
 li.checked p{
     text-decoration: line-through;
 }
-li i::before{
+li span{
     /* justify-self: flex-end; */
     display: none;
 }
-li:hover i::before{
+li:hover span{
     display: flex;
 }
 main .action{
