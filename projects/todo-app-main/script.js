@@ -8,7 +8,8 @@ var active = [];
 var complete = [];
 
 var lists = document.querySelectorAll('ul');
-var views = document.querySelectorAll('.views a');
+var views = document.querySelectorAll('.action .views a');
+var mobileViews = document.querySelectorAll('#views a');
 var list = document.querySelector('.list');
 
 countIt.innerHTML = active.length;
@@ -87,6 +88,7 @@ list.addEventListener('click', (ev) => {
     // console.log(ev.target.tagName);
 })
 views[0].classList.add('view')
+mobileViews[0].classList.add('view')
 function displayAll() {
     var htmlCode = "";
 
@@ -111,6 +113,9 @@ function displayAll() {
     views[0].classList.add('view')
     views[1].classList.remove('view')
     views[2].classList.remove('view')
+    mobileViews[0].classList.add('view')
+    mobileViews[1].classList.remove('view')
+    mobileViews[2].classList.remove('view')
     count()
     keepChecked();
 
@@ -140,6 +145,9 @@ function displayActive() {
     views[1].classList.add('view')
     views[0].classList.remove('view')
     views[2].classList.remove('view')
+    mobileViews[1].classList.add('view')
+    mobileViews[0].classList.remove('view')
+    mobileViews[2].classList.remove('view')
     count()
 }
 function displayCompleted() {
@@ -168,6 +176,9 @@ function displayCompleted() {
     views[2].classList.add('view')
     views[0].classList.remove('view')
     views[1].classList.remove('view')
+    mobileViews[2].classList.add('view')
+    mobileViews[1].classList.remove('view')
+    mobileViews[0].classList.remove('view')
     count()
 
 }
@@ -217,16 +228,20 @@ function sortAllList() {
     }
 }
 function activeToComplete() {
+    let newA
     const items = document.querySelectorAll('#task2 li')
     for (let i = 0; i < active.length; i++) {
         if (items[i].classList.contains('checked') == true) {
             active[i].checked = true;
-            active.splice(i,1);
-            console.log(active.splice());
+            // active.splice(i,1);
+            // console.log(active.splice());
         }  else {
             active[i].checked = false
         }  
     }
+    newA = active.filter(el => el.checked !== true)
+    console.log(newA);
+    active = newA;
 }
 function keepChecked() {
     // to keep the completed items checked afetr changing views

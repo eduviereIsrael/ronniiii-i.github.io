@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="dark.css">
   <script defer src="script.js"></script>
-  <script src="https://kit.fontawesome.com/992b6cd049.js" crossorigin="anonymous"></script>
   <title>Todo app</title>
   <style>
     footer { font-size: 11px; text-align: center; }
@@ -52,6 +51,11 @@
         <a href="" onclick="clearComplete()">Clear Completed</a>
       </div>
     </section>
+    <div id="views">
+      <a href="javascript:void(0);" onclick="displayAll()">All</a>
+      <a href="javascript:void(0);" onclick="displayActive()">Active</a>
+      <a href="javascript:void(0);" onclick="displayCompleted()">Completed</a>
+    </div>
     <p>Drag and drop to reorder list</p>
   </main>
   <footer role="contentinfo">

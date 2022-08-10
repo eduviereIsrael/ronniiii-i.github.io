@@ -80,10 +80,13 @@ main #new, li{
     padding: 20px;
     width: 100%;
 }
-main section{
+main section,
+main #views{
     width: 100%;
 }
-main section, main #new{
+main section, 
+main #new,
+main #views{
     border-radius: 5px;
 }
 main .list{
@@ -157,4 +160,21 @@ main .action{
 }
 .action a.view{
     color: var(--blue);
+}
+main #views{
+    padding: .8rem;
+    text-align: center;
+    font-size: .8rem;
+    display: none;
+}
+#views a.view{
+    color: var(--blue);
+}
+@media screen and (max-width: 420px) {
+    main .action .views{
+        display: none;
+    }
+    main #views{
+        display: block;
+    }
 }
