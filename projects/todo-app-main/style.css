@@ -77,7 +77,7 @@ main #new, li{
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 20px;
+    padding: 1rem;
     width: 100%;
 }
 main section,
@@ -155,7 +155,7 @@ main .action{
     display: flex;
     justify-content: space-between;
     /* gap: 2rem; */
-    padding: 20px;
+    padding:1.1rem;
     font-size: .8rem;
 }
 .action a.view{
@@ -169,6 +169,9 @@ main #views{
 }
 #views a.view{
     color: var(--blue);
+}
+main #views + p{
+    font-size: .7rem;
 }
 @media screen and (max-width: 420px) {
     main .action .views{
