@@ -18,7 +18,7 @@ li{
 li,em{
     border-bottom: 1px solid var(--vlightgrayblue);
 }
-li, li p, main .action a:hover{
+li, li p, main .action a:hover, em, p, input{
     color: var(--vdarkgrayblue);
 }
 .action p, a, li.checked p{
@@ -27,7 +27,7 @@ li, li p, main .action a:hover{
 main #views + p{
     font-size: .7rem;
 }
-em, p, input{
+li span{
     color: var(--vdarkgrayblue);
 }
 main #new{

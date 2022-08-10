@@ -101,7 +101,7 @@ function displayAll() {
                     <label for="item${i}"></label>
                 </div>
                 <p class="itemdesc">${all[i].val}</p>
-                <span onclick="del(${i})">X</span>
+                <span onclick="del(${i})">&#x2573;</span>
             </li>
             `
         }
@@ -133,7 +133,7 @@ function displayActive() {
                     <label for="item${i}"></label>
                 </div>
                 <p class="itemdesc">${active[i].val}</p>
-                <span onclick="del(${i})">X</span>
+                <span onclick="del(${i})">&#x2573;</span>
             </li>
             `
         }
@@ -163,8 +163,8 @@ function displayCompleted() {
                     <input type="checkbox" name="listItem" id="item${i}">
                     <label for="item${i}"></label>
                 </div>
-                <p class="itemdesc">${unique[i].val}</p>
-                <span onclick="del(${i})">X</span>
+                <p class="itemdesc">${unique[i].val}</p>                
+                <span onclick="del(${i})">&#x2573;</span>
             </li>
             `
         }  

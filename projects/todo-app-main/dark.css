@@ -18,7 +18,7 @@ li,em{
 li, li p, main .action a:hover{
     color: var(--lightgrayblue);
 }
-a, em,li.checked p, p, span, input{
+a, em,li.checked p, p, span, input, li span{
     color: var(--darkgrayblue);
 }
 header img{
