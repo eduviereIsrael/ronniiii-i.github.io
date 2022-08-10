@@ -19,12 +19,15 @@ li,em{
     border-bottom: 1px solid var(--vlightgrayblue);
 }
 li, li p, main .action a:hover{
-    color: var(--darkgrayblue);
+    color: var(--vdarkgrayblue);
 }
-li.checked p{
+.action p, a, li.checked p{
     color: var(--lightgrayblue);
 }
-a, em, p, span, input{
+main #views + p{
+    font-size: .7rem;
+}
+em, p, input{
     color: var(--vdarkgrayblue);
 }
 main #new{

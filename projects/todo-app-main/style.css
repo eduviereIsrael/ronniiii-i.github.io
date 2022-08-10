@@ -141,6 +141,9 @@ li.checked .check label{
 li p{
     width: 85%;
 }
+li.checked label{
+    background-color: #66666696;
+}
 li.checked p{
     text-decoration: line-through;
 }
@@ -158,6 +161,10 @@ main .action{
     padding:1.1rem;
     font-size: .8rem;
 }
+.views a,
+#views a{
+    font-weight: 700;
+}
 .action a.view{
     color: var(--blue);
 }
@@ -172,6 +179,11 @@ main #views{
 }
 main #views + p{
     font-size: .7rem;
+}
+@media screen and (max-width: 920px){
+    li span{
+        display: block;
+    }
 }
 @media screen and (max-width: 420px) {
     main .action .views{
