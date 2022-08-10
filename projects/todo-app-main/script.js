@@ -90,6 +90,8 @@ list.addEventListener('click', (ev) => {
 views[0].classList.add('view')
 mobileViews[0].classList.add('view')
 function displayAll() {
+    sortActive();
+    sortComplete();
     var htmlCode = "";
 
     if (all.length !== 0) {
@@ -121,7 +123,8 @@ function displayAll() {
 
 }
 function displayActive() {
-    // sortActive();
+    sortAllList();
+    sortActive();
     var htmlCode = "";
 
     if (active.length !== 0) {
@@ -218,7 +221,7 @@ function count() {
 }
 function sortAllList() {
     // to sort the items into active and completed
-    const items =document.querySelectorAll('li');
+    const items =document.querySelectorAll('#task1 li');
     for (let i = 0; i < all.length; i++) {
         if (items[i].classList.contains('checked') == true) {
             all[i].checked = true
